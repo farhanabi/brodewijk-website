@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Homepage from './pages/Homepage'
-import Customize from './pages/Customize'
-import BookAppointment from './pages/BookAppointment'
-import ContactUs from './pages/ContactUs'
+import Homepage from './pages/Homepage/Homepage'
+import Customize from './pages/Customize/Customize'
+import BookAppointment from './pages/BookAppointment/BookAppointment'
+import ContactUs from './pages/ContactUs/ContactUs'
 
 const App = () => {
   return (
