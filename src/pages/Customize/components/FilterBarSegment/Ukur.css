@@ -1,0 +1,204 @@
+.SizeMethod {
+  border: 2px solid black;
+  max-height: 30px;
+  width: 30%;
+  font-family: 'Helvetica'; 
+}
+
+.MeasurementsList{
+  height: 500px;
+  overflow: scroll;
+  margin-bottom: 25px;
+} 
+
+.InnerMeasurementsList{
+  margin: 0 15px 0 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} 
+
+.MeasurementLabel p {
+  display: inline-block;
+}
+
+.MeasurementLabel {
+  display: inline-block;
+  margin: 20px 0 0 10px;
+  font-family:'Helvetica';
+  letter-spacing: 0.02em;
+  font-size: 1.25vw;
+  width: auto;
+}
+
+.LabelUnit {
+  float: right;
+  margin: 20px 0 0 10px;
+  font-family:'Helvetica';
+  letter-spacing: 0.02em;
+  font-size: 1.25vw;
+}
+
+.MeasurementList {
+  padding: 10px;
+  /*margin: 5px;*/
+  width: 25%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+  transition: 0.3s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.MeasurementList:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.MeasurementInput {
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba(100,100,100,0.5);
+  transition: width 0.4s ease-in-out;
+  color: rgba(50,50,50,1);
+  font-weight: 500;
+  font-size: 15px;
+  text-align: right;
+}
+
+.MeasurementInput:focus {
+  border-bottom: 2px solid rgba(50,50,50,1);
+  transition: width 0.4s ease-in-out;
+}
+
+.changeMeasMethodCont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.changeMeasMethod {
+  /*width: 100%;*/
+  align-items: center;
+  border: 2px solid rgba(70,70,70,1);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1vw;
+  min-width: 125px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  font-weight: 400;
+  margin: 20px 0 10px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.changeMeasMethod:hover {
+  background-color: rgba(70,70,70,1);
+  color: white;
+  font-weight: 400;
+  border: 2px solid white;
+}
+
+.SizeBoxCont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SizeBox {
+  align-items: center;
+  border: 2px solid rgba(70,70,70,1);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1vw;
+  /*min-width: 125px;*/
+  text-align: center;
+  letter-spacing: 0.07em;
+  font-weight: 400;
+  /*margin: 20px 0 10px 0;*/
+  padding: 10px;
+  width: 7.5%;
+}
+
+.SizeBox:hover {
+  background-color: rgba(70,70,70,1);
+  color: white;
+  font-weight: 400;
+  border: 2px solid white;
+}
+
+.SizeBoxSelected {
+  align-items: center;
+  color: white;
+  background-color: rgba(70,70,70,1);
+  border: 2px solid rgba(70,70,70,1);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1vw;
+  /*min-width: 125px;*/
+  text-align: center;
+  letter-spacing: 0.07em;
+  font-weight: 400;
+  /*margin: 20px 0 10px 0;*/
+  padding: 10px;
+  width: 25%;
+}
+
+.changeFeatureContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.changeFeatureRight {
+  margin: 10px 0 10px 0;
+  width: 40%;
+  padding: 10px;
+  border: 2px solid rgba(70,70,70,1);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1vw;
+  min-width: 125px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  font-weight: 300;
+  /*float: right;*/
+  /*right: 0px;*/
+}
+
+.changeFeatureRight:hover {
+  background-color: rgba(70,70,70,1);
+  color: white;
+  font-weight: 400;
+  border: 2px solid white;
+}
+
+.changeFeatureLeft {
+  margin: 10px 0 10px 0;
+  width: 40%;
+  padding: 10px;
+  border: 2px solid rgba(70,70,70,1);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1vw;
+  min-width: 125px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  font-weight: 300;
+  /*float: left;*/
+  /*right: 0px;*/
+}
+
+.changeFeatureLeft:hover {
+  background-color: rgba(70,70,70,1);
+  color: white;
+  font-weight: 400;
+  border: 2px solid white;
+}

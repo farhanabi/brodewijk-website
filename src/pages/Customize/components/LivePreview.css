@@ -1,0 +1,9 @@
+.LivePreview {
+  margin: 0 0 0 150px;
+  width: 50%;
+}
+
+.PreviewImage {
+  width: 37%;
+  position: absolute;
+}

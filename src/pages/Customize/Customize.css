@@ -1,0 +1,28 @@
+.CustomizeContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.FilterBar {
+  margin: 0 0 0 75px;
+  width: 30%;
+}
+
+.FabricImage {
+  top: 43%;
+  max-width: 100%;
+  height: auto; 
+  /*position: absolute;*/
+  left: 39%;
+  overflow: hidden;
+}
+
+.LivePreview {
+  margin: 0 0 0 150px;
+  width: 50%;
+}
+
+.PreviewImage {
+  width: 37%;
+  position: absolute;
+}
