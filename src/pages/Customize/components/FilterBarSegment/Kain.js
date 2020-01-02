@@ -7,7 +7,7 @@ const Kain = ({pilihan,pilihanKain,setPilihan,setPilihanKain}) => {
       <h1 style={{letterSpacing:'0.05em',fontWeight:'500'}}>Fabric Type</h1>
       <div className={classes.FabricsList}>
       	<h3 style={{margin:'10px 0 0 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Siberia</h3>
-      	<h4 style={{margin:'5px 0 5px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400'}}>Deskripsi: Ismar homo asu</h4>
+      	{/*<h4 style={{margin:'5px 0 5px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400'}}>Deskripsi: Ismar homo asu</h4>*/}
       	<div className={classes.InnerFabricsList}>
 	        <div onClick={()=>(setPilihanKain('Oberon'))} className={classes.FabricList}>
 	          <img src={require(`../../../../img/livePreview/Oberon/894_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
