@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import classes from './Customize.css';
-import HeaderCustomize from './components/HeaderCustomize';
+import Header from '../../Components/Header/Header';
 // import Carousel from './component/Carousel';
 import Footer from './components/Footer';
 import FilterBar from './components/FilterBar'
@@ -37,7 +37,7 @@ const Customize = () => {
 
   return (
     <div className={classes.App}>
-      <HeaderCustomize/>
+      <Header active='customize' textColor='rgba(90,90,90)' blackLogo/>
       <div className={classes.CustomizeContainer}>
         <div className={classes.FilterBar}>
           <FilterBar pilihan={pilihan} pilihanKain={pilihanKain} harga={harga} fiturJas={fiturJas} setPilihan={setPilihan} setPilihanKain={setPilihanKain} setHarga={setHarga} setFiturJas={setFiturJas}/>

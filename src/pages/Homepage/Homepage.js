@@ -1,7 +1,7 @@
 import React from 'react';
 // import { useEffect, useState, useRef } from 'react';
 import classes from './Homepage.css';
-import Header from './components/Header';
+import Header from '../../Components/Header/Header';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 
@@ -23,7 +23,7 @@ function Homepage() {
 
   return (
     <div className={classes.App}>
-      <div className={classes.stickyHeader}><Header textColor='white'/></div>
+      <div className={classes.stickyHeader}><Header textColor='white' active='home' stickyHeader/></div>
       <Carousel/>
       <div className={classes.advantages} id='advantages'>
         <h1 style={{color:'rgba(70,70,70)',letterSpacing:'0.05em', margin:'0 0 15px 0'}}>Advantages</h1>
