@@ -1,14 +1,14 @@
 import React from 'react';
 // import { useEffect, useState, useRef } from 'react';
 import classes from './BookAppointment.css';
-import Header from './components/HeaderBookAppointment';
+import Header from '../../Components/Header/Header';
 import Carousel from './components/BookCarousel';
 import Footer from './components/Footer';
 
 function BookAppointment() {
   return (
     <div className={classes.App}>
-      <div className={classes.stickyHeader}><Header textColor='white'/></div>
+      <div className={classes.stickyHeader}><Header textColor='white' active='appointment' stickyHeader/></div>
       <Carousel/>
       <div className={classes.howItWorks} id='howItWorks'>
         <h1 style={{color:'rgba(70,70,70)',letterSpacing:'0.05em', margin:'0 0 15px 0'}}>How It Works</h1>

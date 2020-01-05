@@ -5,6 +5,7 @@ import Homepage from './pages/Homepage/Homepage'
 import Customize from './pages/Customize/Customize'
 import BookAppointment from './pages/BookAppointment/BookAppointment'
 import ContactUs from './pages/ContactUs/ContactUs'
+import Accounts from './pages/Accounts/Accounts'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path='/customize' render={()=> <Customize/>} />
         <Route path='/appointment' render={()=> <BookAppointment/>} />
         <Route path='/contact-us' render={()=> <ContactUs/>} />
+        <Route path='/accounts' render={()=> <Accounts/>} />
       </Router>
     </div>
   );
