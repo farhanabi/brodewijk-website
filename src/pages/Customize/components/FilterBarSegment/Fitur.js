@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './Fitur.css';
 
 const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,setHarga,setFiturJas}) => {
 	/*fitur.lapelStyle='notch';fitur.lapelWidth='medium';setFiturJas(fitur)*/ 
+	const [monog,setMonog] = useState('')
 	return (
 		<div>
 			<h1 style={{letterSpacing:'0.05em',fontWeight:'500'}}>Features</h1>
@@ -297,12 +298,15 @@ const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,set
 			          <label style={{marginTop:5,textAlign:'center'}}>Without Vest</label>
 			        </div> }
         </div>
-        {/*<h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Monogram</h3>
+        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Monogram</h3>
       	<div className={classes.InnerFeaturesList}>
-      		<input onChange={e => {if (e.target.value.length)}} style={{margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}}></input>
-        </div>*/}
+      		{ (monog === '')
+      			? <input onChange={e => setMonog(e.target.value)} style={{margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}} placeholder='Your monogram is empty'></input>
+      			: <input onChange={e => setMonog(e.target.value)} style={{border:'2px solid rgba(70,70,70,0.75)',margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}}></input>
+      		}
+        </div>
         <h3 style={{margin:'25px 0 0 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Additional Request</h3>
-        <h4 style={{margin:'5px 0 5px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400'}}>Just tell us what else do you want ;)</h4>
+        <h4 style={{margin:'5px 0 5px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'12px'}}>Just tell us what else do you want ;)</h4>
       	<div className={classes.InnerFeaturesList}>
       		<textarea type='text' maxlength='20' style={{margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}}></textarea>
         </div>
