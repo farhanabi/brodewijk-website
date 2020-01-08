@@ -1,7 +1,8 @@
-import React from 'react';
-import classes from "./Header.css";
+import React from 'react'
+import classes from "./Header.css"
 import { Link } from 'react-router-dom'
-// import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom'
+
+import Authorization from '../../Shared/Authorization'
 
 const header = ({textColor, active, blackLogo, stickyHeader}) => {
   // const styleSearchBar = {
@@ -24,17 +25,36 @@ const header = ({textColor, active, blackLogo, stickyHeader}) => {
     textAlign:'center',
     borderBottom: '2px solid rgba(155,155,155)'
   }
-  
+
+  const authNav = () => {
+    if (!Authorization.validateToken()) {
+      return (
+        <div className={classes.dropdownContent}>
+          <Link style={navStyle} to="/login/">LOGIN</Link>
+          <Link style={navStyle} to="/register/">REGISTER</Link>
+        </div>
+      )
+    } else {
+      return (
+        <div className={classes.dropdownContent}>
+          <Link style={navStyle} to="/logout/">LOGOUT</Link>
+        </div>
+      )
+    }
+  }
 
 	return (
 		<header className={(stickyHeader) ? classes.appHeaderSticky : classes.appHeader}>
         <Link to="/"><img src={ (blackLogo) ? require('../../img/Brodewijk-black.png') : require('../../img/Brodewijk-white.png')} className={classes.headerLogo} alt="Brodewijk Logo"/></Link>
-        { window.innerWidth >= 560
+        { (window.innerWidth >= 560)
           ?(<nav className={classes.nav}>
               <Link className={classes.navPoint} style={(active === 'customize') ? navStyleActive : navStyle} to="/customize/">CUSTOMIZE</Link>
               <Link className={classes.navPoint} style={(active === 'appointment') ? navStyleActive : navStyle} to="/appointment/">BOOK APPOINTMENT</Link>
               <Link className={classes.navPoint} style={(active === 'contact-us') ? navStyleActive : navStyle} to="/contact-us/">CONTACT US</Link>
-              <Link className={classes.navPoint} style={(active === 'accounts') ? navStyleActive : navStyle} to="/accounts/">ACCOUNTS</Link>
+              <div className={classes.dropdown}>
+              <Link className={classes.dropdownButton} style={(active === 'accounts') ? navStyleActive : navStyle} to="/accounts/">ACCOUNTS</Link>
+                {authNav()}
+              </div>
             </nav>
           ):(
             <nav className={classes.nav}>
@@ -44,7 +64,7 @@ const header = ({textColor, active, blackLogo, stickyHeader}) => {
             </nav>
           )}
         <div className={classes.search}>
-          <input placeholder='SEARCH' className={classes.searchBar} type="text"/>
+          <input placeholder='SEARCH' className={(blackLogo) ? classes.searchBarBlackPlaceholder : classes.searchBar} type="text" />
         </div>
 
         
@@ -52,4 +72,4 @@ const header = ({textColor, active, blackLogo, stickyHeader}) => {
 	)
 }
 
-export default header;
+export default header

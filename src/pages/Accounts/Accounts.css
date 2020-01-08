@@ -1,3 +1,13 @@
+.checkboxGrid {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxGrid input {
+  width: auto;
+  margin: 0 1em 0 0 ;
+}
+
 @media (min-width: 901px) {  
   a {
     color: inherit;
@@ -8,12 +18,51 @@
     text-align: center;
   }
 
+  .Main {
+    padding: 0 5em;
+  }
+
   .App-logo {
     height: 40vmin;
   }
 
   .App-link {
     color: #09d3ac;
+  }
+
+  .input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid rgba(175,175,175);
+    width: 75%;
+    color: rgb(90,90,90);
+    font-size: 12px;
+    background: transparent;
+    padding: 5px 10px;
+    letter-spacing: 0em;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 2em;
+  }
+
+  .input:disabled {
+    background: rgba(90,90,90,0.2);
+  }
+
+  .saveProfile {
+    font-size: calc(20px + 2vmin);
+    border: 0;
+    border-bottom: 2px solid rgba(175,175,175);
+    border-radius: 5px;
+    transition: .5s;
+    width: 75%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  .saveProfile:hover {
+    font-size: calc(20px + 2vmin);
+    background-color: rgba(0,0,0,0.2);
   }
 
   .howItWorksGrid {
@@ -39,8 +88,25 @@
     justify-content: center;
   }
 
+  .column {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .accordionToggle {
+    background-color: black;
+    color:white;
+    display: flex;
+    margin: 10px 0;
+    padding: 0 100px;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .firstGrid {
-    width: 25%;
+    width: 100%;
     margin: 0 10px;
   }
 
@@ -158,7 +224,23 @@
     align-content: center;
     justify-content: center;
   }
+
+  .accordionToggle {
+    background-color: rgb(90,90,90);
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 40px;
+    align-content: center;
+    justify-content: center;
+  }
   
+  .firstGrid {
+    margin: 0px;
+    padding: 40px;
+    width: 90%;
+  }
+
   .firstGrid {
     margin: 0px;
     padding: 40px;

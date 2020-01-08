@@ -1,4 +1,4 @@
-.navPoint:link, .navPoint:visited {
+.navPoint:link, .navPoint:visited, .dropdownButton {
   text-align: center;
   color: white;
   text-decoration: none; 
@@ -10,11 +10,19 @@
   /*border-radius: 10px;*/
 }
 
+.dropdownContent a {
+  display: block;
+  margin: 10px;
+  padding: 15px;
+  transition: color 0.5s ease;
+  letter-spacing: 0.2em;
+}
+
 .navPoint:link:active, .navPoint:visited:active {
   color: white;
 }
 
-.navPoint:hover {
+.navPoint:hover, .dropdownButton:hover {
   color: darken($black, 50%);
   transition: color 0.5s ease;
   background-color: rgba(0,0,0,0.1);
@@ -83,10 +91,10 @@
   /*margin: 0 10px 0 0;*/
 }
 
-.searchBar {
+.searchBar, .searchBarBlackPlaceholder {
   width: 75%;
   height: 100%;
-  color: white;
+  color: rgb(90,90,90);
   font-size: 12px;
   background: transparent;
   border: none;
@@ -102,6 +110,11 @@
   color: white;
 }
 
+.searchBarBlackPlaceholder::placeholder {
+  letter-spacing: 0.2em;
+  color: rgb(90,90,90);
+}
+
 input.searchBar:focus {
   transition: width 0.4s ease-in-out;
   width: 80%;
@@ -112,6 +125,28 @@ input.searchBar:focus {
 input.searchBar::placeholder:focus {
   letter-spacing: 0.2em;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+  margin-top: 10px;
+  transition: .5s;
+}
+
+.dropdownContent a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdownContent {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 @media (max-width: 1200px) {
   .appHeader {
