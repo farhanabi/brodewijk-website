@@ -276,6 +276,37 @@ const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,set
 			          <label style={{marginTop:5,textAlign:'center'}}>None</label>
 			        </div> }
         </div>
+        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Vest</h3>
+      	<div className={classes.InnerFeaturesList}>
+	        { (fiturJas.vest === 'with') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
+			        </div>
+			      : <div onClick={()=>{setFiturJas({...fiturJas,vest:'with'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
+			        </div> }
+	        { (fiturJas.vest === 'none') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Without Vest</label>
+			        </div> 
+		    		: <div onClick={()=>{setFiturJas({...fiturJas,vest:'none'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Without Vest</label>
+			        </div> }
+        </div>
+        {/*<h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Monogram</h3>
+      	<div className={classes.InnerFeaturesList}>
+      		<input onChange={e => {if (e.target.value.length)}} style={{margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}}></input>
+        </div>*/}
+        <h3 style={{margin:'25px 0 0 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Additional Request</h3>
+        <h4 style={{margin:'5px 0 5px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400'}}>Just tell us what else do you want ;)</h4>
+      	<div className={classes.InnerFeaturesList}>
+      		<textarea type='text' maxlength='20' style={{margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}}></textarea>
+        </div>
+
       </div>
 	  	<div className={classes.changeFeatureContainer}>
 		  	<span className={classes.changeFeatureLeft} onClick={()=>{setPilihan('kain');setFiturJas({...fiturJas,shoulder:'standard',lapelWidth:'narrow',lapelStyle:'notch',chestPocket:'classic',buttonsSegment:'single_breasted',buttons:'1',pockets:'double_welt',vents:'one'})}}>Back to Fabric</span>

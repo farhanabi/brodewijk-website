@@ -22,7 +22,10 @@ const Fitur = ({pilihan,setPilihan}) => {
 
         { (measMethod === 'Customize Size')
           ? <div>
-              <h3 style={{margin:'20px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Upper Measurement</h3>
+              <h3 style={{margin:'20px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Body Measurement</h3>
+              <div className={classes.InnerMeasurementsList}><p className={classes.MeasurementLabel}>Tinggi Badan: </p><input type='number' className={classes.MeasurementInput} step='0.5'/><p className={classes.LabelUnit}> cm</p></div>
+              <div className={classes.InnerMeasurementsList}><p className={classes.MeasurementLabel}>Berat Badan: </p><input type='number' className={classes.MeasurementInput} step='0.5'/><p className={classes.LabelUnit}> cm</p></div>
+              <h3 style={{margin:'40px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Upper Measurement</h3>
               <div className={classes.InnerMeasurementsList}><p className={classes.MeasurementLabel}>Panjang Jas: </p><input type='number' className={classes.MeasurementInput} step='0.5'/><p className={classes.LabelUnit}> cm</p></div>
               <div className={classes.InnerMeasurementsList}><p className={classes.MeasurementLabel}>Lebar Bahu: </p><input type='number' className={classes.MeasurementInput} step='0.5'/><p className={classes.LabelUnit}> cm</p></div>
               <div className={classes.InnerMeasurementsList}><p className={classes.MeasurementLabel}>Panjang Tangan: </p><input type='number' className={classes.MeasurementInput} step='0.5'/><p className={classes.LabelUnit}> cm</p></div>
