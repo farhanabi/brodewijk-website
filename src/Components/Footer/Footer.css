@@ -1,0 +1,148 @@
+@media (min-width: 1126px) {
+  .footer {
+    margin-top: 50px;
+    padding: 50px 100px;
+    background: rgba(10,10,10,1);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*font-family: "Prata";*/
+    align-items: center;
+    height: 50%;
+  }
+
+  .footerLogo {
+    /*height: 50%;
+    width: 50%;*/
+    max-width: 290px;
+    max-height: 40px;
+    margin-bottom: 0; 
+  }
+
+  .leftContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+    
+  .rightContent {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .innerRightContent {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .clickableLink {
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+  }
+
+  .clickableLink:hover {
+    color: rgba(210,210,210,1);
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1125px) {
+  .footer {
+    margin-top: 50px;
+    padding: 25px 0;
+    background: rgba(10,10,10,1);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    /*font-family: "Prata";*/
+    align-items: center;
+    height: 50%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .footerLogo {
+    /*height: 50%;
+    width: 50%;*/
+    max-width: 290px;
+    max-height: 40px;
+    margin-bottom: 0; 
+  }
+
+  .leftContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+    
+  .rightContent {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .leftContent {
+    margin: 40px 0 20px 0;
+  }
+
+  .innerRightContent {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .clickableLink {
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+  }
+
+  .clickableLink:hover {
+    color: rgba(210,210,210,1);
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    margin-top: 50px;
+    padding: 25px 0;
+    background: rgba(10,10,10,1);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    /*font-family: "Prata";*/
+    align-items: center;
+    height: 50%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .footerLogo {
+    /*height: 50%;
+    width: 50%;*/
+    max-width: 290px;
+    max-height: 40px;
+  }
+
+  .leftContent {
+    margin: 40px 0 20px 0;
+  }
+
+  .innerRightContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .clickableLink {
+    font-size: 4vw;
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+  }
+}

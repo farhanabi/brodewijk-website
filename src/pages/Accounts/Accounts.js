@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import classes from './Accounts.css';
 import Header from '../../Components/Header/Header';
 // import Carousel from '../component/BookCarousel';
-import Footer from './components/Footer';
+import Footer from '../../Components/Footer/Footer';
 
 import Authorization from "../../Shared/Authorization";
 import APIBuilder from "../../Shared/APIBuilder";

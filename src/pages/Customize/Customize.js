@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import classes from './Customize.css';
 import Header from '../../Components/Header/Header';
 // import Carousel from './component/Carousel';
-import Footer from './components/Footer';
+import Footer from '../../Components/Footer/Footer';
 import FilterBar from './components/FilterBar'
 import LivePreview from './components/LivePreview'
 

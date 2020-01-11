@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './ContactUs.css';
 import Header from '../../Components/Header/Header';
 // import Carousel from '../component/BookCarousel';
-import Footer from './components/Footer';
+import Footer from '../../Components/Footer/Footer';
 
 function BookAppointment() {
   return (

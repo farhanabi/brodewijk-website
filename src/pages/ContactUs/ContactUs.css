@@ -26,6 +26,10 @@
     text-align: l
   }
 
+  .call{
+    font-weight: 600; 
+  }
+
   .call:hover {
     font-weight: 700; 
   }
@@ -256,6 +260,10 @@
     font-family: 'prata';
     font-weight: 800;
     letter-spacing: 0.025em;
+  }
+
+  .call{
+    font-weight: 600; 
   }
 
   .call:hover {
