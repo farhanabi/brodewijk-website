@@ -1,0 +1,101 @@
+.loginTextInput {
+  width: 75%;
+  height: 100%;
+  color: rgb(90,90,90);
+  font-size: 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(175,175,175);
+  padding: 5px 10px;
+  letter-spacing: 0em;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  margin-bottom: 2em;
+}
+
+.loginTextInput::placeholder {
+  letter-spacing: 0.2em;
+  color: rgb(90,90,90);
+}
+
+.registerLabel {
+  color: rgb(90,90,90);
+}
+
+.registerAnchor {
+  color: black;
+}
+
+.registerAnchor:hover {
+  border-bottom: 1px solid black;
+}
+
+.loginButton {
+  font-size: calc(20px + 2vmin);
+  background-color: rgba(0,0,0,0);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid black;
+  transition: .5s;
+}
+
+.loginButton:hover {
+  font-size: calc(20px + 2vmin);
+  background-color: rgba(0,0,0,0.2);
+}
+
+@media (min-width: 901px) {  
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .App {
+    text-align: center;
+  }
+
+  .firstGrids {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 40px;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .firstGrid {
+    width: 50%;
+    margin: 0 10px;
+  }
+
+}
+
+@media (max-width: 900px) {
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  
+  .App {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .firstGrids {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 40px;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .firstGrid {
+    margin: 0px;
+    padding: 40px;
+    width: 100%;
+  }
+
+}
