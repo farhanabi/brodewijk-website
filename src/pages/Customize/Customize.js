@@ -8,7 +8,7 @@ import LivePreview from './components/LivePreview'
 
 const Customize = () => {
   const [pilihan, setPilihan] = useState('kain')
-  const [pilihanKain, setPilihanKain] = useState('Siberia')
+  const [pilihanKain, setPilihanKain] = useState({jenis:'Siberia',warna:'Putih'})
   const [harga, setHarga] = useState(2000000)
   const [fiturJas, setFiturJas] = useState({
     canvas:'unconstructed',

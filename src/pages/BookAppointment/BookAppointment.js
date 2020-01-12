@@ -17,7 +17,7 @@ function BookAppointment() {
             <img src={require('../../img/howItWork-1.png')} className={classes.howItWorkImage} alt=""/>
             <h3 className={classes.howItWorkTitle}>1. BOOK YOUR APPOINTMENT</h3>
             <p className={classes.howItWorkPar}>Book your appointment and our Tailor will come to you</p>
-            <p className={classes.howItWorkPar}>*Only available in Bandung area for now</p>
+            <p className={classes.howItWorkPar}>*Please read our terms and conditions</p>
           </div>
           <div style={{color:'rgba(100,100,100)'}} className={classes.howItWork} >
             <img src={require('../../img/howItWork-2.png')} className={classes.howItWorkImage} alt=""/>

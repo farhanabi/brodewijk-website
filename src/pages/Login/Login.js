@@ -30,11 +30,11 @@ function Accounts() {
       <div className={classes.firstGrids} id='firstGrid'>
         <div className={classes.firstGrid}>
           <form onSubmit={handleSubmit}>
-            <input placeholder='Email' className={classes.loginTextInput} type="email" onChange={e => setEmail(e.target.value)} value={email || ''}/>
+            <input placeholder='EMAIL' className={classes.loginTextInput} type="email" onChange={e => setEmail(e.target.value)} value={email || ''}/>
             <br />
-            <input placeholder='Password' className={classes.loginTextInput} type="password" onChange={e => setPassword(e.target.value)} value={password || ''}/>
+            <input placeholder='PASSWORD' className={classes.loginTextInput} type="password" onChange={e => setPassword(e.target.value)} value={password || ''}/>
             <br />
-            <input type="submit" value="Login" className={classes.loginButton} />
+            <input type="submit" value="LOGIN" className={classes.loginButton} />
             <br />
             <h3 className={classes.registerLabel}>Not a member? <Link to="/register/" className={classes.registerAnchor}>Sign up now!</Link></h3>
           </form>

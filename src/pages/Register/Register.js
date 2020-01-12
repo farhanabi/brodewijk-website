@@ -31,13 +31,13 @@ function Register() {
       <div className={classes.firstGrids} id='firstGrid'>
         <div className={classes.firstGrid}>
           <form onSubmit={handleSubmit}>
-            <input placeholder='Email' className={classes.loginTextInput} type="email" onChange={e => setEmail(e.target.value)} value={email || ''}/>
+            <input placeholder='EMAIL' className={classes.loginTextInput} type="email" onChange={e => setEmail(e.target.value)} value={email || ''}/>
             <br />
-            <input placeholder='Password' className={classes.loginTextInput} type="password" onChange={e => setPassword(e.target.value)} value={password || ''}/>
+            <input placeholder='PASSWORD' className={classes.loginTextInput} type="password" onChange={e => setPassword(e.target.value)} value={password || ''}/>
             <br />
-            <input placeholder='Password Confirmation' className={classes.loginTextInput} type="password" onChange={e => setPasswordConfirmation(e.target.value)} value={passwordConfirmation || ''}/>
+            <input placeholder='PASSWORD CONFIRMATION' className={classes.loginTextInput} type="password" onChange={e => setPasswordConfirmation(e.target.value)} value={passwordConfirmation || ''}/>
             <br />
-            <input type="submit" value="Register" className={classes.loginButton} />
+            <input type="submit" value="REGISTER" className={classes.loginButton} />
             <br />
           </form>
         </div>

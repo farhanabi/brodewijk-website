@@ -7,7 +7,7 @@
   border: none;
   border-bottom: 2px solid rgba(175,175,175);
   padding: 5px 10px;
-  letter-spacing: 0em;
+  letter-spacing: 0.05em;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   margin-bottom: 2em;
@@ -18,19 +18,30 @@
   color: rgb(90,90,90);
 }
 
+input.loginTextInput:focus {
+  transition: width 0.4s ease-in-out;
+  width: 75%;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid rgba(75,75,75);
+}
+
 .registerLabel {
+  font-family: 'Helvetica';
+  font-weight: 300;
   color: rgb(90,90,90);
 }
 
 .registerAnchor {
   color: black;
+  font-weight: 400;
 }
 
 .registerAnchor:hover {
-  border-bottom: 1px solid black;
+  /*border-bottom: 1px solid black;*/
+  font-weight: 600;
 }
 
-.loginButton {
+/*.loginButton {
   font-size: calc(20px + 2vmin);
   background-color: rgba(0,0,0,0);
   border-top: 0;
@@ -43,6 +54,28 @@
 .loginButton:hover {
   font-size: calc(20px + 2vmin);
   background-color: rgba(0,0,0,0.2);
+}*/
+
+.loginButton {
+  align-items: center;
+  border: 2px solid rgba(70,70,70,1);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1vw;
+  min-width: 125px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  font-weight: 400;
+  margin: 20px 0 10px 0;
+  padding: 10px;
+  width: 25%;
+}
+
+.loginButton:hover {
+  background-color: rgba(70,70,70,1);
+  color: white;
+  font-weight: 400;
+  border: 2px solid white;
 }
 
 @media (min-width: 901px) {  
@@ -96,6 +129,10 @@
     margin: 0px;
     padding: 40px;
     width: 100%;
+  }
+
+  .loginButton {
+    font-size: 15px;
   }
 
 }
