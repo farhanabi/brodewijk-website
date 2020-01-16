@@ -1,0 +1,127 @@
+
+@media (min-width: 771px) {
+	.carousel {
+	  /*position: absolute;*/
+	  align-content: center;
+	  overflow: hidden;
+	  object-fit: fill;
+	}
+
+	.carouselImage {
+	  position: relative;
+	  width: 100%;
+	  margin-top: -10%;
+	  left: 100%;
+	  margin-left: -200%;
+	  filter: brightness(70%);
+	}
+
+	.carouselText {
+		padding: 200px;
+		width: 70%;
+		position: absolute;
+	  top: 30%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+		background: transparent;
+		color: rgba(215,215,215,1);
+	}
+
+	.carouselText h3 {
+		font-size: 1.5vw;
+	}
+
+	.carouselText h1 {
+		font-size: 4vw;
+	}
+
+	.bookNow {
+		text-decoration:none;
+		color: rgba(40,40,40,1);
+		background-color: rgba(215,215,215,1);
+		position: absolute;
+	  left: 25%;
+		width: 50%;
+		letter-spacing: 0.3em;
+		font-weight: 400;
+		padding: 15px;
+		border: 3px solid rgba(215,215,215,1);
+		font-size: 1.5vw;
+	}
+
+	.bookNow:hover {
+		color: rgba(215,215,215,1);
+		background-color: rgba(50,50,50,1);
+		border: 3px solid rgba(50,50,50,1);
+	}
+}
+
+@media (max-width: 770px) {
+	.carousel {  
+		width: 100%;
+  	margin: 0;
+	  overflow: hidden;	
+  	position: relative;
+	  /*height: 1080px;*/
+	}
+
+	.carouselImage {
+	  left: 50%;
+	  margin-left: -850px;
+	  position: relative;
+	}
+
+	.carouselText {
+		width: 80%;
+		position: absolute;
+	  top: 60%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+		background: transparent;
+		color: rgba(215,215,215,1);
+	}
+
+	.carouselText h1 {
+		font-size: 9vw;
+	}
+
+	.bookNow {
+		text-decoration:none;
+		color: rgba(215,215,215,1);
+		letter-spacing: 0.3em;
+		font-weight: 400;
+		padding: 15px;
+		height: auto;
+		overflow: hidden;
+		border: 1px solid rgba(215,215,215,1);
+		/*display:table;*/
+		;
+	}
+
+	.bookNow:hover {
+		color: rgba(40,40,40,1);
+		background-color: rgba(215,215,215,1);
+	}
+}
+
+/*@media (max-width: 450px) {
+	.bookNow {
+			font-size: 3vw;
+		;
+	}
+}*/
+
+/*@media (max-width: 768px) {
+  .carousel {
+    height: 100%;
+    position: relative;
+    left: 100%;
+    margin-left: -200%;
+    height: 100%;
+  }
+
+  .carouselImage {
+    object-fit: cover;
+    height: 100%;
+  }
+}*/
