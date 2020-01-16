@@ -14,7 +14,7 @@ const LivePreview = ({pilihanKain,harga,fiturJas}) => {
       <img src={require(`../../../img/livePreview/${pilihanKain.jenis}/breast_pocket_${fiturJas.chestPocket}.png`)} className={classes.PreviewImage} alt=''/>
       <img src={require(`../../../img/livePreview/${pilihanKain.jenis}/hip_pockets_${fiturJas.pockets}+fit_slim.png`)} className={classes.PreviewImage} alt=''/>
       <h3 style={{fontFamily:"Helvetica Neue",fontSize:20,marginBottom:0,fontWeight:500,letterSpacing:'0.05em'}}>{pilihanKain.jenis}</h3>
-      <h4 style={{marginTop:5, fontWeight:400}}>Rp. {harga.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</h4>
+      <h4 style={{marginTop:5, fontWeight:400}}>Rp{harga.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</h4>
     </div>
     )
   } else {
@@ -27,7 +27,7 @@ const LivePreview = ({pilihanKain,harga,fiturJas}) => {
       <img src={require(`../../../img/livePreview/${pilihanKain.jenis}/bottom_${fiturJas.buttonsSegment}+length_long+hemline_closed.png`)} className={classes.PreviewImage} alt=''/>
       <img src={require(`../../../img/livePreview/${pilihanKain.jenis}/interior+sleeves.png`)} className={classes.PreviewImage} alt=''/>
       <h3 style={{fontFamily:"Helvetica Neue",fontSize:20,marginBottom:0,fontWeight:500,letterSpacing:'0.05em'}}>{pilihanKain.jenis}</h3>
-      <h4 style={{marginTop:5, fontWeight:400}}>Rp. {harga.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</h4>
+      <h4 style={{marginTop:5, fontWeight:400}}>Rp{harga.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</h4>
     </div>
     )
   }

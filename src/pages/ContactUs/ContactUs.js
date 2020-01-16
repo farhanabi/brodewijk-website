@@ -5,7 +5,7 @@ import Header from '../../Components/Header/Header';
 // import Carousel from '../component/BookCarousel';
 import Footer from '../../Components/Footer/Footer';
 
-function BookAppointment() {
+function ContactUs() {
   return (
     <div className={classes.App}>
       <div className={classes.stickyHeader}><Header textColor='black' active='contact-us' blackLogo/></div>
@@ -29,4 +29,4 @@ function BookAppointment() {
   );
 }
 
-export default BookAppointment;
+export default ContactUs;

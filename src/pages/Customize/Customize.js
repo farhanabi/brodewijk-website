@@ -5,8 +5,10 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import FilterBar from './components/FilterBar'
 import LivePreview from './components/LivePreview'
+import { Link } from 'react-router-dom'
 
 const Customize = () => {
+  const [modal,setModal] = useState('Shown')
   const [pilihan, setPilihan] = useState('kain')
   const [pilihanKain, setPilihanKain] = useState({jenis:'Siberia',warna:'Putih'})
   const [harga, setHarga] = useState(2000000)
@@ -20,7 +22,8 @@ const Customize = () => {
     buttons:'1',
     pockets:'double_welt',
     fit:'slim',
-    vents:'one'
+    vents:'one',
+    vest:'none'
   })
 
   /*<div className={classes.LivePreview}>
@@ -37,7 +40,27 @@ const Customize = () => {
 
   return (
     <div className={classes.App}>
-      <Header active='customize' textColor='rgba(90,90,90)' blackLogo/>
+      <div className={classes.stickyHeader}><Header textColor='black' active='customize' blackLogo/></div>
+      { (modal==='Shown')
+      ? <div className={classes.modal}>
+          { (window.innerWidth >= 950)
+          ? <div className={classes.modalContent}>
+              <span onClick={()=>setModal('Hidden')} className={classes.modalClose}>&times;</span>
+              <p style={{letterSpacing:'0.05em'}}>This page is still under construction. If you are willing to order, please use Book Appointment page.</p>
+              <div className={classes.LinkBoxCont}>
+                <span className={classes.LinkBox} onClick={()=>setModal('Hidden')}>Continue to Customize Page</span>
+                <Link className={classes.LinkBoxBlack} to="/appointment/">Proceed to Book Appointment Page Instead</Link>
+              </div>
+            </div>
+          : <div className={classes.modalContent}>
+              <p style={{display:'flex',letterSpacing:'0.05em'}}>Sorry, this page is not yet available for the mobile view. Please try to view this page on your wide-screen device.</p>
+              <div className={classes.LinkBoxCont}>
+                <Link className={classes.LinkBoxBlack} to="/">Go Back to Homepage</Link>
+              </div>
+            </div>
+          }
+        </div>
+      : null}
       <div className={classes.CustomizeContainer}>
         <div className={classes.FilterBar}>
           <FilterBar pilihan={pilihan} pilihanKain={pilihanKain} harga={harga} fiturJas={fiturJas} setPilihan={setPilihan} setPilihanKain={setPilihanKain} setHarga={setHarga} setFiturJas={setFiturJas}/>

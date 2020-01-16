@@ -11,25 +11,25 @@ const Kain = ({pilihan,pilihanKain,setPilihan,setPilihanKain}) => {
       	<h4 style={{margin:'5px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}><b style={{fontWeight:600}}>Super 200s Wool</b>, Cool in Summer, Warm in Winter, Easy to maintain, Wrinkle Free.</h4>
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Wedding, Business, Party, and Graduation</h4>
       	<div className={classes.InnerFabricsList}>
-	        <div onClick={()=>(setPilihanKain({jenis:'Oberon',warna:'Navy Blue'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Oberon/894_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Navy Blue</label>
+	        <div onClick={()=>(setPilihanKain({jenis:'Blackpool',warna:'Dark Green'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Dim Gray/Dim Gray.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Dim Gray</label>
 	        </div>
 	        <div onClick={()=>(setPilihanKain({jenis:'Blackpool',warna:'Dark Green'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Blackpool/674_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Dark Green</label>
+	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Navy Blue/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Navy Blue</label>
 	        </div>
 	        <div onClick={()=>(setPilihanKain({jenis:'Farlie',warna:'Black'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Farlie//1237_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Black</label>
+	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Olive Green/Olive Green.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Olive Green</label>
 	        </div>
 	        <div onClick={()=>(setPilihanKain({jenis:'Farlie',warna:'Black'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Farlie//1237_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Black</label>
+	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Peru Brown/Peru Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Peru Brown</label>
 	        </div>
 	        <div onClick={()=>(setPilihanKain({jenis:'Farlie',warna:'Black'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Farlie//1237_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Black</label>
+	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Saddle Brown/Saddle Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Saddle Brown</label>
 	        </div>
         </div>
         <h3 style={{margin:'20px 0 10px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Kavelingen</h3>
@@ -37,24 +37,24 @@ const Kain = ({pilihan,pilihanKain,setPilihan,setPilihanKain}) => {
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Wedding, Business, and Party</h4>
       	<div className={classes.InnerFabricsList}>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Siberia'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Siberia/1840_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Siberia</label>
+	          <img src={require(`../../../../img/livePreview/Kavelingen/Black Check/Black Check.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Black Check</label>
 	        </div>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Oberon'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Oberon/894_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Oberon</label>
+	          <img src={require(`../../../../img/livePreview/Kavelingen/Chocolate Check/Chocolate Check.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Chocolate Check</label>
 	        </div>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Wickford'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Wickford/778_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Wickford</label>
+	          <img src={require(`../../../../img/livePreview/Kavelingen/Grayish-Brown/Grayish-Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Grayish-Brown</label>
 	        </div>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Blackpool/674_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Blackpool</label>
+	          <img src={require(`../../../../img/livePreview/Kavelingen/Navy Blue Check/Navy Blue Check.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Navy Blue Check</label>
 	        </div>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Farlie'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Farlie//1237_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Farlie</label>
+	          <img src={require(`../../../../img/livePreview/Kavelingen/Warm Gray/Warm Gray.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Warm Gray</label>
 	        </div>
         </div>
         <h3 style={{margin:'20px 0 10px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Sharkskin</h3>
@@ -62,8 +62,32 @@ const Kain = ({pilihan,pilihanKain,setPilihan,setPilihanKain}) => {
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Wedding, Business, Party, Graduation</h4>
       	<div className={classes.InnerFabricsList}>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Blackpool/674_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Blackpool</label>
+	          <img src={require(`../../../../img/livePreview/Sharkskin/Black/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Black</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Sharkskin/Brown/Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Brown</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Sharkskin/Dark Grey/Dark Grey.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Dark Grey</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Sharkskin/Dim Grey/Dim Grey.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Dim Grey</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Sharkskin/Light Grey/Light Grey.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Light Grey</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Sharkskin/Midnight Blue/Midnight Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Midnight Blue</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Sharkskin/Navy Blue/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Navy Blue</label>
 	        </div>
         </div>
         <h3 style={{margin:'20px 0 10px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Halk</h3>
@@ -71,8 +95,32 @@ const Kain = ({pilihan,pilihanKain,setPilihan,setPilihanKain}) => {
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Bridal/Wedding and Party</h4>
       	<div className={classes.InnerFabricsList}>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Blackpool/674_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Blackpool</label>
+	          <img src={require(`../../../../img/livePreview/Halk/Black/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Black</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Halk/Dark Maroon/Dark Maroon.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Dark Maroon</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Halk/Dark Red/Dark Red.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Dark Red</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Halk/Gold/Gold.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Gold</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Halk/Navy Blue/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Navy Blue</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Halk/Silver/Silver.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Silver</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Halk/Slate Gray/Slate Gray.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Slate Gray</label>
 	        </div>
         </div>
         <h3 style={{margin:'20px 0 10px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Solva</h3>
@@ -80,8 +128,8 @@ const Kain = ({pilihan,pilihanKain,setPilihan,setPilihanKain}) => {
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Bridal/Wedding and Party</h4>
       	<div className={classes.InnerFabricsList}>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Blackpool/674_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Blackpool</label>
+	          <img src={require(`../../../../img/livePreview/Solva/White/White.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>White</label>
 	        </div>
         </div>
         <h3 style={{margin:'20px 0 10px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Enslev</h3>
@@ -89,8 +137,12 @@ const Kain = ({pilihan,pilihanKain,setPilihan,setPilihanKain}) => {
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Bridal/Wedding and Party</h4>
       	<div className={classes.InnerFabricsList}>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Blackpool/674_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Blackpool</label>
+	          <img src={require(`../../../../img/livePreview/Enslev/Hash Brown/Hash Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Hash Brown</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Enslev/Silver/Silver.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Silver</label>
 	        </div>
         </div>
         <h3 style={{margin:'20px 0 10px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Nimbska</h3>
@@ -98,8 +150,25 @@ const Kain = ({pilihan,pilihanKain,setPilihan,setPilihanKain}) => {
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Wedding, Business, Party, and Gradutation</h4>
       	<div className={classes.InnerFabricsList}>
 	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Blackpool/674_huge_c300.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Blackpool</label>
+	          <img src={require(`../../../../img/livePreview/Nimbska/Matcha Green/Matcha Green.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Matcha Green</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Nimbska/Sandy Brown/Sandy Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Sandy Brown</label>
+	        </div>
+	        <div onClick={()=>(setPilihanKain({...pilihanKain,jenis:'Blackpool'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Nimbska/Torque Blue/Torque Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Torque Blue</label>
+	        </div>
+        </div>
+        <h3 style={{margin:'20px 0 10px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Jet Black</h3>
+      	<h4 style={{margin:'5px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}><b style={{fontWeight:600}}>Semi Wool</b>, Classic solid black, Cool comfort, Easy to maintain.</h4>
+      	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Business, Graduation, Party</h4>
+      	<div className={classes.InnerFabricsList}>
+	        <div onClick={()=>(setPilihanKain({jenis:'Jet Black/Black',warna:'Black'}))} className={classes.FabricList}>
+	          <img src={require(`../../../../img/livePreview/Jet Black/Black/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+	          <label style={{marginTop:5}}>Black</label>
 	        </div>
         </div>
       </div>

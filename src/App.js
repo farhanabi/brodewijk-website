@@ -7,6 +7,7 @@ import BookAppointment from './pages/BookAppointment/BookAppointment'
 import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions'
 import ContactUs from './pages/ContactUs/ContactUs'
 import Accounts from './pages/Accounts/Accounts'
+import LandingPage from './pages/LandingPage/LandingPage'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Logout from './pages/Logout/Logout'
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/login' render={()=> <Login/>} />
         <Route path='/register' render={()=> <Register/>} />
         <Route path='/logout' render={()=> <Logout/>} />
+        <Route path='/landing' render={()=> <LandingPage/>} />
       </Router>
     </div>
   );

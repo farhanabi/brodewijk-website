@@ -27,15 +27,6 @@ const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,set
         </div>
         <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Canvas Type</h3>
       	<div className={classes.InnerFeaturesList}>
-	        { (fiturJas.canvas === 'half_canvas') 
-		        ? <div className={classes.FeatureListSelected}>
-		        		<img src={require(`../../../../img/customization/canvas/construction_half_canvas.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5}}>Half Canvas</label>
-			        </div> 
-			      : <div onClick={()=>{setFiturJas({...fiturJas,canvas:'half_canvas'});setHarga(2500000)}}  className={classes.FeatureList}>
-			          <img src={require(`../../../../img/customization/canvas/construction_half_canvas.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5}}>Half Canvas</label>
-			        </div> }
 	        { (fiturJas.canvas === 'unconstructed') 
 		        ? <div className={classes.FeatureListSelected} style={{paddingRight:20}}>
 				        <img src={require(`../../../../img/customization/canvas/construction_unconstructed.png`)} width='100%' className={classes.FeatureImage} alt=''/>
@@ -44,6 +35,15 @@ const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,set
 			      : <div onClick={()=>{setFiturJas({...fiturJas,canvas:'unconstructed'});setHarga(2000000)}} className={classes.FeatureList} style={{paddingRight:20}}>
 			          <img src={require(`../../../../img/customization/canvas/construction_unconstructed.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5,alignSelf:'center'}}>Unconstructed</label>
+			        </div> }
+	        { (fiturJas.canvas === 'full_canvas') 
+		        ? <div className={classes.FeatureListSelected}>
+		        		<img src={require(`../../../../img/customization/canvas/construction_full_canvas.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5}}>Full Canvas</label>
+			        </div> 
+			      : <div onClick={()=>{setFiturJas({...fiturJas,canvas:'full_canvas'});setHarga(2500000)}}  className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/canvas/construction_full_canvas.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5}}>Full Canvas</label>
 			        </div> }
         </div>
         <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Shoulder Type</h3>
@@ -201,6 +201,15 @@ const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,set
         </div>
         <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Pockets</h3>
       	<div className={classes.InnerFeaturesList}>
+	        { (fiturJas.pockets === 'double_welt') 
+		        ? <div className={classes.FeatureListSelected}>
+				        <img src={require(`../../../../img/customization/pockets/no_pocket_flaps.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>No Pocket Flaps</label>
+			        </div>
+			      : <div onClick={()=>{setFiturJas({...fiturJas,pockets:'double_welt'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/pockets/no_pocket_flaps.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>No Pocket Flaps</label>
+			        </div> }
 	        { (fiturJas.pockets === 'with_flap') 
 		        ? <div className={classes.FeatureListSelected}>
 				        <img src={require(`../../../../img/customization/pockets/pocket_flaps.png`)} width='100%' className={classes.FeatureImage} alt=''/>
@@ -218,15 +227,6 @@ const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,set
 			      : <div onClick={()=>{setFiturJas({...fiturJas,pockets:'patched'})}} className={classes.FeatureList}>
 			          <img src={require(`../../../../img/customization/pockets/patch_pockets.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5,textAlign:'center'}}>Patch Pockets</label>
-			        </div> }
-	        { (fiturJas.pockets === 'double_welt') 
-		        ? <div className={classes.FeatureListSelected}>
-				        <img src={require(`../../../../img/customization/pockets/no_pocket_flaps.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5,textAlign:'center'}}>No Pocket Flaps</label>
-			        </div>
-			      : <div onClick={()=>{setFiturJas({...fiturJas,pockets:'double_welt'})}} className={classes.FeatureList}>
-			          <img src={require(`../../../../img/customization/pockets/no_pocket_flaps.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5,textAlign:'center'}}>No Pocket Flaps</label>
 			        </div> }
 	        { (fiturJas.pockets === 'with_flap_slanted') 
 		        ? <div className={classes.FeatureListSelected}>
@@ -279,15 +279,6 @@ const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,set
         </div>
         <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Vest</h3>
       	<div className={classes.InnerFeaturesList}>
-	        { (fiturJas.vest === 'with') 
-		        ? <div className={classes.FeatureListSelected}>
-			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
-			        </div>
-			      : <div onClick={()=>{setFiturJas({...fiturJas,vest:'with'})}} className={classes.FeatureList}>
-			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
-			        </div> }
 	        { (fiturJas.vest === 'none') 
 		        ? <div className={classes.FeatureListSelected}>
 			          <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
@@ -296,6 +287,15 @@ const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,set
 		    		: <div onClick={()=>{setFiturJas({...fiturJas,vest:'none'})}} className={classes.FeatureList}>
 			          <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5,textAlign:'center'}}>Without Vest</label>
+			        </div> }
+	        { (fiturJas.vest === 'with') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
+			        </div>
+			      : <div onClick={()=>{setFiturJas({...fiturJas,vest:'with'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
 			        </div> }
         </div>
         <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Monogram</h3>

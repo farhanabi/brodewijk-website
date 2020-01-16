@@ -5,7 +5,7 @@ import Header from '../../Components/Header/Header';
 import Carousel from './components/TnCCarousel';
 import Footer from '../../Components/Footer/Footer';
 
-function BookAppointment() {
+function TermsAndConditions() {
   const [lang,setLang] = useState('EN')
   return (
     <div className={classes.App}>
@@ -180,4 +180,4 @@ function BookAppointment() {
   );
 }
 
-export default BookAppointment;
+export default TermsAndConditions;

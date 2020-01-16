@@ -1,3 +1,89 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modalContent {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modalClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modalClose:hover,.modalClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.LinkBoxCont {
+  /*padding: 10px 0;*/
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.LinkBox {
+  align-items: center;
+  margin: 0 5px;
+  border: 2px solid rgba(70,70,70,1);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1vw;
+  /*min-width: 125px;*/
+  text-align: center;
+  letter-spacing: 0.07em;
+  font-weight: 400;
+  /*margin: 20px 0 10px 0;*/
+  padding: 10px;
+  width: 30%;
+}
+
+.LinkBox:hover {
+  /*color: white;*/
+  background-color: rgba(240,240,240,1);
+}
+
+.LinkBoxBlack {
+  align-items: center;
+  margin: 0 5px;
+  border: 2px solid rgba(50,50,50,1);
+  background-color: rgba(50,50,50,1);
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 1vw;
+  /*min-width: 125px;*/
+  text-align: center;
+  letter-spacing: 0.07em;
+  font-weight: 400;
+  /*margin: 20px 0 10px 0;*/
+  padding: 10px;
+  width: 30%;
+}
+
+.LinkBoxBlack:hover {
+  /*color: white;*/
+  background-color: rgba(70,70,70,1);
+  border: 2px solid rgba(70,70,70,1);
+}
+
 .CustomizeContainer {
   display: flex;
   flex-direction: row;
@@ -25,4 +111,20 @@
 .PreviewImage {
   width: 37%;
   position: absolute;
+}
+
+@media (max-width: 950px) {
+  .LinkBoxBlack {
+    font-size: 16px;
+    width: 50%;
+  }
+
+  .modalContent {
+    padding: 20px 10%;
+    width: 80%;
+  }
+
+  .modal{
+    background-color: rgba(0,0,0,0.8);
+  }
 }

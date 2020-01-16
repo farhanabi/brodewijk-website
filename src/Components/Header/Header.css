@@ -1,9 +1,25 @@
-.navPoint:link, .navPoint:visited, .dropdownButton {
+*::selection {
+  color: inherit;
+}
+
+.navPoint:link, .navPoint:visited {
   text-align: center;
   color: white;
   text-decoration: none; 
   cursor: pointer;
   margin: 10px;
+  padding: 15px;
+  transition: color 0.5s ease;
+  letter-spacing: 0.2em;
+  /*border-radius: 10px;*/
+}
+
+.dropdownButton {
+  text-align: center;
+  color: white;
+  text-decoration: none; 
+  cursor: pointer;
+  margin: 0px;
   padding: 15px;
   transition: color 0.5s ease;
   letter-spacing: 0.2em;
@@ -22,10 +38,16 @@
   color: white;
 }
 
-.navPoint:hover, .dropdownButton:hover {
+.navPoint:hover{
   color: darken($black, 50%);
   transition: color 0.5s ease;
   background-color: rgba(0,0,0,0.1);
+}
+
+.dropdownButton:hover {
+  border-radius: 50%;
+  border: 2px solid rgba(100,100,100,0.5);
+  transition: color 0.5s ease;
 }
 
 .appHeaderSticky {
@@ -33,6 +55,7 @@
   padding: 25px 50px;
   max-height: 165px;
   /*height: 165px;*/
+  position: absolute;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -41,7 +64,6 @@
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
-  position: absolute;
   background: rgb(0,0,0);
   background: -moz-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
   background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
@@ -73,21 +95,22 @@
 .headerLogo {
   /*margin: 10px 10px 0 0;*/
   padding: 10px 0 0 0;
-  max-width: 435px;
+  max-width: 290px;
   max-height: 75px;
   /*border: 1px solid grey;*/
 }
 
 .nav {
-  display: grid;
-  grid-template-columns: repeat(4,auto);
+  display: flex;
+  width: 65%;
+  /*grid-template-columns: repeat(4,auto);*/
   align-items: center;
   justify-content: center;
 }
 
 .search {
   align-items: center;
-  width: 20%;
+  width: 50%;
   /*margin: 0 10px 0 0;*/
 }
 
@@ -116,6 +139,7 @@
 }
 
 input.searchBar:focus {
+  color: white;
   transition: width 0.4s ease-in-out;
   width: 80%;
   letter-spacing: 0.05em;
@@ -123,6 +147,17 @@ input.searchBar:focus {
 }
 
 input.searchBar::placeholder:focus {
+  letter-spacing: 0.2em;
+}
+
+input.searchBarBlackPlaceholder:focus {
+  transition: width 0.4s ease-in-out;
+  width: 80%;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid rgb(90,90,90,1);
+}
+
+input.searchBarBlackPlaceholder::placeholder:focus {
   letter-spacing: 0.2em;
 }
 
@@ -140,16 +175,23 @@ input.searchBar::placeholder:focus {
   z-index: 999;
   margin-top: 10px;
   transition: .5s;
+  right: 0;
 }
 
-.dropdownContent a:hover {background-color: #ddd;}
+.dropdownContent a:hover {
+  color: darken($black, 50%);
+  transition: color 0.5s ease;
+  background-color: rgba(0,0,0,0.1);}
 
-.dropdown:hover .dropdownContent {display: block;}
+.dropdown:hover .dropdownContent {
+  display: block;
+  justify-content: flex-end;
+}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 @media (max-width: 1200px) {
-  .appHeader {
+  .appHeader, .appHeaderSticky {
     grid-template-areas: repeat(2, auto);;
     grid-template-rows: none;
     flex-direction: row;
@@ -168,7 +210,7 @@ input.searchBar::placeholder:focus {
 }
 
 @media (max-width: 980px) {
-  .appHeader {
+  .appHeader, .appHeaderSticky {
     grid-template-areas: repeat(2, auto);;
     grid-template-column: none;
     justify-content: center;
@@ -208,16 +250,17 @@ input.searchBar::placeholder:focus {
 }
 
 @media (max-width: 570px) {
-  .navPoint:active .navPoint:visited {
+  .navPoint:active, .navPoint:visited {
     font-size: 0.2vh;
+    flex-grow:1;
     width: 50%;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    padding: 0px;
+    margin: 0px;
   }
 
   .nav {
-    display: grid; 
     width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     padding: 0;

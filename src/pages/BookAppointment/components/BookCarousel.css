@@ -65,9 +65,11 @@
 	}
 
 	.carouselImage {
+	  height: 100%;
 	  left: 50%;
 	  margin-left: -850px;
 	  position: relative;
+	  filter: brightness(60%);
 	}
 
 	.carouselText {
