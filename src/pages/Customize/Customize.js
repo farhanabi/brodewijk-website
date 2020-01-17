@@ -11,6 +11,7 @@ const Customize = () => {
   const [modal,setModal] = useState('Shown')
   const [pilihan, setPilihan] = useState('kain')
   const [pilihanKain, setPilihanKain] = useState({jenis:'Siberia',warna:'Putih'})
+  const [pilihanLining, setPilihanLining] = useState({jenis:'Standard',warna:'Putih'})
   const [harga, setHarga] = useState(2000000)
   const [fiturJas, setFiturJas] = useState({
     canvas:'unconstructed',
@@ -63,7 +64,7 @@ const Customize = () => {
       : null}
       <div className={classes.CustomizeContainer}>
         <div className={classes.FilterBar}>
-          <FilterBar pilihan={pilihan} pilihanKain={pilihanKain} harga={harga} fiturJas={fiturJas} setPilihan={setPilihan} setPilihanKain={setPilihanKain} setHarga={setHarga} setFiturJas={setFiturJas}/>
+          <FilterBar pilihan={pilihan} pilihanKain={pilihanKain} pilihanLining={pilihanLining} harga={harga} fiturJas={fiturJas} setPilihan={setPilihan} setPilihanKain={setPilihanKain} setPilihanLining={setPilihanLining} setHarga={setHarga} setFiturJas={setFiturJas}/>
         </div>
         <LivePreview pilihanKain={pilihanKain} harga={harga} fiturJas={fiturJas} />
       </div>

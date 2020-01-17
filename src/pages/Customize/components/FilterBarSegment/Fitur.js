@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import classes from './Fitur.css';
 
-const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,setHarga,setFiturJas}) => {
+const Fitur = ({pilihan,pilihanKain,pilihanLining,harga,fiturJas,setPilihan,setPilihanKain,setPilihanLining,setHarga,setFiturJas}) => {
 	/*fitur.lapelStyle='notch';fitur.lapelWidth='medium';setFiturJas(fitur)*/ 
 	const [monog,setMonog] = useState('')
 	return (
@@ -25,6 +25,300 @@ const Fitur = ({pilihan,pilihanKain,harga,fiturJas,setPilihan,setPilihanKain,set
 			          <label style={{textAlign:'center',cursor:'pointer'}}>Regular Fit</label>
 			        </div> }
         </div>
+        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Lining</h3>
+      	<div className={classes.InnerFeaturesList}>
+	        { (pilihanLining.jenis === 'Standard') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <label style={{textAlign:'center'}}>Standard</label>
+			        </div>
+			      : <div onClick={()=>{setPilihanLining({...pilihanLining,jenis:'Standard'})}} className={classes.FeatureList}>
+			          <label style={{textAlign:'center',cursor:'pointer'}}>Standard</label>
+			        </div> }
+	        { (pilihanLining.jenis === 'Bemberg') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <label style={{textAlign:'center'}}>&#10054; Bemberg</label>
+			        </div>
+			      : <div onClick={()=>{setPilihanLining({...pilihanLining,jenis:'Bemberg'})}} className={classes.FeatureList}>
+			          <label style={{textAlign:'center',cursor:'pointer'}}>&#10054; Bemberg</label>
+			        </div> }
+			    { (pilihanLining.jenis === 'Motif') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <label style={{textAlign:'center'}}>Pattern</label>
+			        </div>
+			      :	<div onClick={()=>{setPilihanLining({...pilihanLining,jenis:'Motif'})}} className={classes.FeatureList}>
+				        <label style={{textAlign:'center',cursor:'pointer'}}>Pattern</label>
+				      </div>
+			      }  
+	        
+			    { (pilihanLining.jenis === 'Standard') 
+	        	? <div className={classes.InnerFabricsList}>
+	        			{ (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'Black' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Black</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'Black'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Black</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'Navy Blue' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Navy Blue</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'Navy Blue'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Navy Blue</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'Dark Grey' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Dark Grey.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Dark Grey</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'Dark Grey'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Dark Grey.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Dark Grey</label>
+					        </div>} 
+					      { (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'Maroon' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Maroon.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Maroon</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'Maroon'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Maroon.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Maroon</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'White' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/White.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>White</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'White'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/White.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>White</label>
+					        </div>} 
+					      { (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'Orange Silk' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Orange Silk.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Orange Silk</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'Orange Silk'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Orange Silk.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Orange Silk</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'Chocolate Brown' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Chocolate Brown.png`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Chocolate Brown</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'Chocolate Brown'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Chocolate Brown.png`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Chocolate Brown</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'Silver Grey' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Silver Grey.png`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Silver Grey</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'Silver Grey'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Silver Grey.png`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Silver Grey</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'Dark Green' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Dark Green.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Dark Green</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'Dark Green'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Dark Green.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Dark Green</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Standard' && pilihanLining.warna === 'Light Blue' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Light Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Light Blue</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Standard',warna:'Light Blue'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Light Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Light Blue</label>
+					        </div>} 	
+	        		</div>
+					  : null }
+
+			    { (pilihanLining.jenis === 'Bemberg') 
+	        	? <div className={classes.InnerFabricsList}>
+	        			<h4 style={{margin:'5px auto',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}><b style={{fontWeight:600}}>Premium Silk</b>, Cooler, Thermal Comfort, Softer on Your Skin.</h4>     
+					    	{ (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'Black' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Black</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'Black'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Black</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'Navy Blue' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Navy Blue</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'Navy Blue'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Navy Blue</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'Dark Grey' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Dark Grey.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Dark Grey</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'Dark Grey'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Dark Grey.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Dark Grey</label>
+					        </div>} 
+					      { (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'Maroon' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Maroon.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Maroon</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'Maroon'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Maroon.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Maroon</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'White' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/White.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>White</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'White'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/White.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>White</label>
+					        </div>} 
+					      { (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'Orange Silk' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Orange Silk.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Orange Silk</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'Orange Silk'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Orange Silk.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Orange Silk</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'Chocolate Brown' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Chocolate Brown.png`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Chocolate Brown</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'Chocolate Brown'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Chocolate Brown.png`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Chocolate Brown</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'Silver Grey' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Silver Grey.png`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Silver Grey</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'Silver Grey'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Silver Grey.png`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Silver Grey</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'Dark Green' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Dark Green.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Dark Green</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'Dark Green'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Dark Green.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Dark Green</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Bemberg' && pilihanLining.warna === 'Light Blue' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Light Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Light Blue</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Bemberg',warna:'Light Blue'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Bemberg/Light Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Light Blue</label>
+					        </div>} 
+					    </div>
+					  : null }
+
+
+	        { (pilihanLining.jenis === 'Motif') 
+	        	? <div className={classes.InnerFabricsList}>
+	        			{ (pilihanLining.jenis === 'Motif' && pilihanLining.warna === 'Black Batik' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8938.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Black Batik</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Motif',warna:'Black Batik'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8938.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Black Batik</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Motif' && pilihanLining.warna === 'Blue Batik' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8942.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Blue Batik</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Motif',warna:'Blue Batik'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8942.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Blue Batik</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Motif' && pilihanLining.warna === 'Black Strip' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8940.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Black Strip</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Motif',warna:'Black Strip'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8940.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Black Strip</label>
+					        </div>} 
+					      { (pilihanLining.jenis === 'Motif' && pilihanLining.warna === 'Gray Strip' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8941.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Gray Strip</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Motif',warna:'Gray Strip'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8941.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Gray Strip</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Motif' && pilihanLining.warna === 'Blue Strip' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8945.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Blue Strip</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Motif',warna:'Blue Strip'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8945.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Blue Strip</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Motif' && pilihanLining.warna === 'Blue Squared' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8947.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Blue Squared</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Motif',warna:'Blue Squared'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8947.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Blue Squared</label>
+					        </div>}  
+					      { (pilihanLining.jenis === 'Motif' && pilihanLining.warna === 'Gray Circle' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8943.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Gray Circle</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Motif',warna:'Gray Circle'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8943.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Gray Circle</label>
+					        </div>}
+					      { (pilihanLining.jenis === 'Motif' && pilihanLining.warna === 'Navy Mix Pattern' )
+					      ? <div className={classes.FabricListSelected}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8948.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Navy Mix Pattern</label>
+					        </div>
+					      : <div onClick={()=>(setPilihanLining({jenis:'Motif',warna:'Navy Mix Pattern'}))} className={classes.FabricList}>
+					          <img src={require(`../../../../img/livePreview/Lining/Motif/IMG_8948.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+					          <label style={{marginTop:5}}>Navy Mix Pattern</label>
+					        </div>}      
+					    </div>
+					  : null }
+			  </div>
         <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Canvas Type</h3>
       	<div className={classes.InnerFeaturesList}>
 	        { (fiturJas.canvas === 'unconstructed') 
