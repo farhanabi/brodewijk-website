@@ -1,3 +1,8 @@
+.howItWorkImage {
+  max-height: 120px;
+  max-width: 120px;
+}
+
 @media (min-width: 901px) {  
   .App {
     text-align: center;
@@ -148,12 +153,12 @@
     margin: 0;
     letter-spacing: 0.2em;
     font-weight: 600;
-    font-size: 6vw;
+    font-size: 4vw;
   }
 
   .howItWorkPar {
     letter-spacing: 0.1em;
-    font-size: 5vw;
+    font-size: 3vw;
   }
 
   .secondGrid {

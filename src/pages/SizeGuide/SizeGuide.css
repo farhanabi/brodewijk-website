@@ -1,0 +1,261 @@
+.SizeGuideTexts h2 {
+  font-family: 'Prata';
+}
+
+.SizeGuideTexts p {
+  font-family: 'Helvetica';
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.table th, .table td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.table th {
+  padding: 0 10px;
+}
+
+@media (min-width: 901px) {  
+  .App {
+    text-align: center;
+  }
+
+  .App-logo {
+    height: 40vmin;
+  }
+
+  .App-link {
+    color: #09d3ac;
+  }
+
+  .howItWorksGrid {
+    /*max-height: 200px;*/
+    /*padding: 10px;*/
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .SizeGuideTexts {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SizeGuideText {
+    width: 60%;
+    margin: 0 10px;
+    text-align: left;
+  }
+
+  .SizeGuidePar {
+    justify-content: flex-start;
+    /*width: 50%;*/
+    margin: 0 10px;
+    /*align-content: center;*/
+    /*align-items: center;*/
+  }
+
+  .changeLang {
+    align-items: center;
+    border: 2px solid rgba(70,70,70,1);
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1vw;
+    min-width: 125px;
+    text-align: center;
+    letter-spacing: 0.07em;
+    font-weight: 400;
+    margin: 20px 0 10px 0;
+    padding: 15px;
+    width: 25%;
+  }
+
+  .changeLang:hover {
+    background-color: rgba(70,70,70,1);
+    color: white;
+    font-weight: 400;
+    border: 2px solid white;
+  }
+
+  .howItWorkTitle {
+    margin: 0 0;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    font-size: 1vw;
+  }
+
+  .howItWorkPar {
+    letter-spacing: 0.1em;
+    font-size: 1vw;
+  }
+
+  .howItWorkImage {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .secondGrid {
+    margin:50px 0 0 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .secondGridImage {
+    object-fit: contain;
+    margin: 10px 0 0 0;
+    width: 50%;
+  }
+
+  .ocassionsGrid {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .thirdGridImage {
+    margin: 0px 7.5px;
+    max-height: 480px;
+    max-width: 960px;
+    width: 100%;
+  }
+
+  .bookNow {
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid rgb(50,50,50);
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    letter-spacing: 0.1em;
+  }
+
+  .bookNow:hover {
+    color: white;
+    background-color: rgb(50,50,50);
+  }
+
+}
+
+@media (max-width: 900px) {
+  .App {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .howItWorksGrid {
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100%;
+  }
+
+  .howItWorks {
+    margin: 0px;
+    padding: 40px;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .SizeGuideTexts {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SizeGuideText {
+    width: 110%;
+    margin: 0 0;
+    text-align: left;
+  }
+
+  .SizeGuidePar {
+    justify-content: flex-start;
+    /*width: 50%;*/
+    margin: 0 10px;
+    /*align-content: center;*/
+    /*align-items: center;*/
+  }
+
+  .changeLang {
+    align-items: center;
+    border: 2px solid rgba(70,70,70,1);
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 12px;
+    min-width: 125px;
+    text-align: center;
+    letter-spacing: 0.07em;
+    font-weight: 400;
+    margin: 20px 0 10px 0;
+    padding: 15px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .changeLang:hover {
+    background-color: rgba(70,70,70,1);
+    color: white;
+    font-weight: 400;
+    border: 2px solid white;
+  }
+
+  .secondGrid {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    /*max-width: 100%;*/
+    /*display: grid;*/
+    margin: 40px 0 0 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .secondGridImage {
+    width: 100%;
+  }
+
+  .ocassionsGrid {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 2,
+  }
+
+  .thirdGridImage {
+    margin: 10px 0;
+    width: 45%;
+  }
+
+  .tableCont {
+    overflow-x: scroll;
+  }
+
+  .footer {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 12px;
+    height: 50%;
+  }
+}

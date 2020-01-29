@@ -230,13 +230,13 @@ function Accounts() {
               <h3>Complex / Cluster:</h3><input className={classes.input} type='text' value={additionalAddressInfo || ''} onChange={e => setAdditionalAddressInfo(e.target.value)} />
             </div>
             <div className={classes.firstGrid} style={{textAlign:'left'}}>
-              <h3>Province:</h3><input className={classes.input} type='text' value={provinsi || ''} onChange={e => setProvinsi(e.target.value)} />
+              <h3>Sub-district:</h3><input className={classes.input} type='text' value={kecamatan || ''} onChange={e => setKecamatan(e.target.value)} />
             </div>
             <div className={classes.firstGrid} style={{textAlign:'left'}}>
               <h3>City / District:</h3><input className={classes.input} type='text' value={kotaKabupaten || ''} onChange={e => setKotaKabupaten(e.target.value)} />
             </div>
             <div className={classes.firstGrid} style={{textAlign:'left'}}>
-              <h3>Sub-distric:</h3><input className={classes.input} type='text' value={kecamatan || ''} onChange={e => setKecamatan(e.target.value)} />
+              <h3>Province:</h3><input className={classes.input} type='text' value={provinsi || ''} onChange={e => setProvinsi(e.target.value)} />
             </div>
             <div className={classes.firstGrid} style={{textAlign:'left'}}>
               <h3>Postal Code:</h3><input className={classes.input} type='number' value={postalCode || ''} onChange={e => { if (e.target.value.length <=5) setPostalCode(e.target.value)}} />
@@ -293,8 +293,11 @@ function Accounts() {
             
           </div>
           <div className={classes.column}>
-            <div className={classes.firstGrid} style={{textAlign:'left'}}>
-              <select onChange={e => setStandardSize(e.target.value)} disabled={!useStandardSize} value={standardSize}>
+            <div className={classes.checkboxGrid} style={{textAlign:'left'}}>
+              <input className={classes.input} type='checkbox' checked={useStandardSize}  onChange={e => setUseStandardSize(e.target.checked)}/><h3>Use Standard Size</h3>
+            </div>
+            <div className={classes.firstGrid} style={{textAlign:'left',display:useStandardSize?'flex':'none'}}>
+              <select className={classes.sizeDropdown} onChange={e => setStandardSize(e.target.value)} disabled={!useStandardSize} value={standardSize}>
                 <option value={0}>Choose Standard Size</option>
                 <option value={Constants.STANDARD_SIZE_S}>S</option>
                 <option value={Constants.STANDARD_SIZE_M}>M</option>
@@ -302,9 +305,6 @@ function Accounts() {
                 <option value={Constants.STANDARD_SIZE_XL}>XL</option>
                 <option value={Constants.STANDARD_SIZE_XXL}>XXL</option>
               </select>
-            </div>
-            <div className={classes.checkboxGrid} style={{textAlign:'left'}}>
-              <input className={classes.input} type='checkbox' checked={useStandardSize}  onChange={e => setUseStandardSize(e.target.checked)}/><h3>Use Standard Size</h3>
             </div>
             <div className={classes.firstGrid} style={{textAlign:'left'}}>
               <h3>Tinggi Badan:</h3><input className={classes.input} type='number' disabled={useStandardSize} value={tinggiBadan || 0} onChange={e => { if (e.target.value.length <= 3) setTinggiBadan(e.target.value)}} />

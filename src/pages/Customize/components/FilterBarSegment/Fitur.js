@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './Fitur.css';
 
 const Fitur = ({pilihan,pilihanKain,pilihanLining,harga,fiturJas,setPilihan,setPilihanKain,setPilihanLining,setHarga,setFiturJas}) => {
-	/*fitur.lapelStyle='notch';fitur.lapelWidth='medium';setFiturJas(fitur)*/ 
-	const [monog,setMonog] = useState('')
+	/*fitur.lapelStyle='notch';fitur.lapelWidth='medium';setFiturJas(fitur)*/
 	return (
 		<div>
 			<h1 style={{letterSpacing:'0.05em',fontWeight:'500'}}>Features</h1>
@@ -571,32 +570,92 @@ const Fitur = ({pilihan,pilihanKain,pilihanLining,harga,fiturJas,setPilihan,setP
 			          <label style={{marginTop:5,textAlign:'center'}}>None</label>
 			        </div> }
         </div>
-        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Vest</h3>
+        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Additional</h3>
       	<div className={classes.InnerFeaturesList}>
-	        { (fiturJas.vest === 'none') 
+	        {// (fiturJas.pants === 'none') 
+		      //   ? <div className={classes.FeatureListSelected}>
+			     //      <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			     //      <label style={{marginTop:5,textAlign:'center'}}>Without Pants</label>
+			     //    </div> 
+		    		// : <div onClick={()=>{setFiturJas({...fiturJas,pants:'none'})}} className={classes.FeatureList}>
+			     //      <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			     //      <label style={{marginTop:5,textAlign:'center'}}>Without Pants</label>
+			     //    </div> }
+	       //  { (fiturJas.pants === 'with') 
+		      //   ? <div className={classes.FeatureListSelected}>
+			     //      <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			     //      <label style={{marginTop:5,textAlign:'center'}}>With Pants</label>
+			     //    </div>
+			     //  : <div onClick={()=>{setFiturJas({...fiturJas,pants:'with'})}} className={classes.FeatureList}>
+			     //      <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			     //      <label style={{marginTop:5,textAlign:'center'}}>With Pants</label>
+			     //    </div>
+			   	}
+			  	{(fiturJas.pants === 'none')
+				     	? <div onClick={()=>{setFiturJas({...fiturJas,pants:'with'})}} className={classes.FeatureList}>
+				    		  <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+				    			<label style={{marginTop:5,textAlign:'center'}}>Pants</label>
+				    		</div>
+				    	: <div onClick={()=>{setFiturJas({...fiturJas,pants:'none'})}} className={classes.FeatureListSelected}>
+				          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+				        	<label style={{marginTop:5,textAlign:'center'}}>Pants</label>
+				        </div>}
+			    {(fiturJas.vest === 'none')
+			     	? <div onClick={()=>{setFiturJas({...fiturJas,vest:'with'})}} className={classes.FeatureList}>
+			    		  <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			    			<label style={{marginTop:5,textAlign:'center'}}>Vest</label>
+			    		</div>
+			    	: <div onClick={()=>{setFiturJas({...fiturJas,vest:'none'})}} className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			        	<label style={{marginTop:5,textAlign:'center'}}>Vest</label>
+			        </div>}
+			    {(fiturJas.shirt === 'none')
+			     	? <div onClick={()=>{setFiturJas({...fiturJas,shirt:'with'})}} className={classes.FeatureList}>
+			    		  <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			    			<label style={{marginTop:5,textAlign:'center'}}>Shirt</label>
+			    		</div>
+			    	: <div onClick={()=>{setFiturJas({...fiturJas,shirt:'none'})}} className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			        	<label style={{marginTop:5,textAlign:'center'}}>Shirt</label>
+			        </div>} 
+        </div>
+        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Tie</h3>
+      	<div className={classes.InnerFeaturesList}>
+	        {(fiturJas.tie === 'none') 
 		        ? <div className={classes.FeatureListSelected}>
 			          <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5,textAlign:'center'}}>Without Vest</label>
+			          <label style={{marginTop:5,textAlign:'center'}}>None</label>
 			        </div> 
-		    		: <div onClick={()=>{setFiturJas({...fiturJas,vest:'none'})}} className={classes.FeatureList}>
+		    		: <div onClick={()=>{setFiturJas({...fiturJas,tie:'none'})}} className={classes.FeatureList}>
 			          <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5,textAlign:'center'}}>Without Vest</label>
+			          <label style={{marginTop:5,textAlign:'center'}}>None</label>
 			        </div> }
-	        { (fiturJas.vest === 'with') 
+			    { (fiturJas.tie === 'bowtie') 
 		        ? <div className={classes.FeatureListSelected}>
 			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
+			          <label style={{marginTop:5,textAlign:'center'}}>Bow Tie</label>
 			        </div>
-			      : <div onClick={()=>{setFiturJas({...fiturJas,vest:'with'})}} className={classes.FeatureList}>
+			      : <div onClick={()=>{setFiturJas({...fiturJas,tie:'bowtie'})}} className={classes.FeatureList}>
 			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
-			        </div> }
+			          <label style={{marginTop:5,textAlign:'center'}}>Bow Tie</label>
+			        </div> 
+			   	}
+	        { (fiturJas.tie === 'necktie') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Tie</label>
+			        </div>
+			      : <div onClick={()=>{setFiturJas({...fiturJas,tie:'necktie'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Tie</label>
+			        </div> 
+			   	}
         </div>
         <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Monogram</h3>
       	<div className={classes.InnerFeaturesList}>
-      		{ (monog === '')
-      			? <input onChange={e => setMonog(e.target.value)} value={monog} style={{border:'2px solid rgba(70,70,70,0)',borderBottom:'2px solid rgba(70,70,70,0.75)',margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}} placeholder='Your monogram is empty'></input>
-      			: <input onChange={e => setMonog(e.target.value)} value={monog} style={{border:'2px solid rgba(70,70,70,0.75)',margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}}></input>
+      		{ (fiturJas.monogram === '')
+      			? <input onChange={e => setFiturJas({...fiturJas,monogram:e.target.value})} value={fiturJas.monogram} style={{border:'2px solid rgba(70,70,70,0)',borderBottom:'2px solid rgba(70,70,70,0.75)',margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}} placeholder='Your monogram is empty'></input>
+      			: <input onChange={e => setFiturJas({...fiturJas,monogram:e.target.value})} value={fiturJas.monogram} style={{border:'2px solid rgba(70,70,70,0.75)',margin:'5px 0 5px 10px',width:'75%',fontFamily:'Helvetica',fontWeight:'400',padding:5}}></input>
       		}
         </div>
         <h3 style={{margin:'25px 0 0 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Additional Request</h3>

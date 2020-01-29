@@ -9,6 +9,45 @@
   margin-top: 20px; 
 }
 
+.advantages {
+  margin: 0px;
+  /*padding: 40px;*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.advantage {
+  margin: 0 10px;
+  width: 20%;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.advantageTitle {
+  margin: 0 0;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 1vw;
+  color: rgba(255,255,255,0.9);
+}
+
+.advantageImage {
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.advantagePar {
+  letter-spacing: 0.1em;
+  font-size: 1vw;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+}
+
 @media (min-width: 901px) {  
   .App {
     text-align: center;
@@ -41,7 +80,7 @@
   }
 
   .LandingText {
-    width: 60%;
+    width: 100%;
     margin: 0 10px;
     text-align: left;
   }
@@ -119,19 +158,60 @@
     width: 100%;
   }
 
+  .advantages {
+    width: 100%;
+    align-content: space-around;
+    justify-content: space-around;
+  }
+
+  .advantage {
+    width: 15%;
+    margin: 0 10px;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+
   .bookNow {
-    margin-bottom: 30px;
-    padding: 10px;
-    border: 1px solid rgb(50,50,50);
-    position: absolute;
-    left: 40%;
-    width: 20%;
-    letter-spacing: 0.1em;
+    margin-top: 30px;
+    text-decoration:none;
+    color: rgba(40,40,40,1);
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    padding: 15px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid rgba(40,40,40,1);
+    text-align: center;
+  }
+
+  .whatsappBlack,.whatsappWhite {
+    max-width: 14px;
+  }
+
+  .whatsappWhite {
+    display: none;
   }
 
   .bookNow:hover {
-    color: white;
-    background-color: rgb(50,50,50);
+    color: rgba(215,215,215,1);
+    background-color: rgba(40,40,40,1);
+  }
+
+  .bookNow:hover .whatsappBlack{
+    display: none;
+  }
+
+  .bookNow:hover .whatsappWhite{
+    display: inline-block;
+  }
+
+  .bookNow:hover {
+    color: rgba(215,215,215,1);
+    background-color: rgba(40,40,40,1);
   }
 }
 
@@ -170,7 +250,7 @@
   }
 
   .LandingText {
-    width: 80%;
+    width: 100%;
     margin: 20px 0;
     text-align: left;
   }
@@ -234,6 +314,69 @@
     width: 45%;
   }
 
+  .advantages {
+    width: 100%;
+    align-content: space-around;
+    justify-content: space-around;
+  }
+
+  .advantage {
+    width: 40%;
+    margin: 20px 0 20px 0;
+  }
+
+  .advantageTitle {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .advantageImage {
+    margin-bottom: 20px;
+    width: 50%;
+  }
+
+  .advantagePar {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .bookNow {
+    margin-top: 20px;
+    text-decoration:none;
+    color: rgba(40,40,40,1);
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    padding: 15px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid rgba(40,40,40,1);
+    text-align: center;
+  }
+
+  .whatsappBlack,.whatsappWhite {
+    max-width: 14px;
+  }
+
+  .whatsappWhite {
+    display: none;
+  }
+
+  .bookNow:hover {
+    color: rgba(215,215,215,1);
+    background-color: rgba(40,40,40,1);
+  }
+
+  .bookNow:hover .whatsappBlack{
+    display: none;
+  }
+
+  .bookNow:hover .whatsappWhite{
+    display: inline-block;
+  }
+  
   .footer {
     padding: 25px 0;
     display: flex;

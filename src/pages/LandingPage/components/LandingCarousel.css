@@ -1,5 +1,9 @@
 
-@media (min-width: 621px) {
+@media (min-width: 961px) {
+	hr {
+		width: 50%;
+	}
+
 	.carousel {
 	  position: relative;
 	  align-content: center;
@@ -13,13 +17,13 @@
 	  margin-top: -10%;
 	  left: 100%;
 	  margin-left: -200%;
-	  filter: brightness(70%);
+	  filter: brightness(50%);
 	}
 
 	.carouselText {
 		width: 70%;
 		position: absolute;
-	  top: 55%;
+	  top: 45%;
 	  left: 50%;
 	  transform: translate(-50%, -50%);
 		background: transparent;
@@ -27,7 +31,10 @@
 	}
 
 	.carouselText h3 {
-		font-size: 1.5vw;
+		line-height: 1.5em;
+		letter-spacing: 0.5em;
+		font-weight: 400;
+		font-size: 15px;
 	}
 
 	.carouselText h1 {
@@ -35,7 +42,9 @@
 	}
 
 	.bookNow {
-		text-decoration:none;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		/*text-decoration:none;
 		color: rgba(40,40,40,1);
 		background-color: rgba(215,215,215,1);
 		position: absolute;
@@ -45,17 +54,44 @@
 		font-weight: 400;
 		padding: 15px;
 		border: 3px solid rgba(215,215,215,1);
-		font-size: 1.5vw;
+		font-size: 1.5vw;*/
+
+		text-decoration:none;
+		color: rgba(215,215,215,1);
+		letter-spacing: 0.3em;
+		font-weight: 400;
+		padding: 15px;
+		height: auto;
+		overflow: hidden;
+		border: 1px solid rgba(215,215,215,1);
 	}
 
 	.bookNow:hover {
-		color: rgba(215,215,215,1);
+		/*color: rgba(215,215,215,1);
 		background-color: rgba(50,50,50,1);
-		border: 3px solid rgba(50,50,50,1);
+		border: 3px solid rgba(50,50,50,1);*/
+		color: rgba(40,40,40,1);
+		background-color: rgba(215,215,215,1);
 	}
+
+  .whatsappBlack,.whatsappWhite {
+    max-width: 14px;
+  }
+
+  .whatsappBlack {
+    display: none;
+  }
+
+  .bookNow:hover .whatsappWhite{
+    display: none;
+  }
+
+  .bookNow:hover .whatsappBlack{
+    display: inline-block;
+  }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 960px) {
 	.carousel {  
 		width: 100%;
   	margin: 0 auto;
@@ -77,7 +113,7 @@
 	.carouselText {
 		width: 80%;
 		position: absolute;
-	  top: 35%;
+	  top: 40%;
 	  left: 50%;
 	  transform: translate(-50%, -50%);
 		background: transparent;
@@ -85,11 +121,19 @@
 	}
 
 	.carouselText h1 {
-		font-size: 9vw;
+		font-size: 32px;
+	}
+
+	.carouselText h3 {
+		line-height: 1.5em;
+		letter-spacing: 0.5em;
+		font-weight: 400;
+		font-size: 12px;
 	}
 
 	.bookNow {
-		margin-top: 100px;
+		margin-top: 50px;
+		margin-bottom: 50px;
 		text-decoration:none;
 		color: rgba(215,215,215,1);
 		letter-spacing: 0.3em;
@@ -106,6 +150,22 @@
 		color: rgba(40,40,40,1);
 		background-color: rgba(215,215,215,1);
 	}
+
+	.whatsappBlack,.whatsappWhite {
+    max-width: 14px;
+  }
+
+  .whatsappBlack {
+    display: none;
+  }
+
+  .bookNow:hover .whatsappWhite{
+    display: none;
+  }
+
+  .bookNow:hover .whatsappBlack{
+    display: inline-block;
+  }
 }
 
 /*@media (max-width: 450px) {

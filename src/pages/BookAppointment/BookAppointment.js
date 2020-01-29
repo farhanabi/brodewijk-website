@@ -16,7 +16,7 @@ function BookAppointment() {
           <div style={{color:'rgba(100,100,100)'}} className={classes.howItWork} >
             <img src={require('../../img/howItWork-1.png')} className={classes.howItWorkImage} alt=""/>
             <h3 className={classes.howItWorkTitle}>1. BOOK YOUR APPOINTMENT</h3>
-            <p className={classes.howItWorkPar}>Book your appointment and our Tailor will come to you</p>
+            <p className={classes.howItWorkPar}>Book your appointment and our Tailor will come to you (Bandung Area only)</p>
             <p className={classes.howItWorkPar}>*Please read our terms and conditions</p>
           </div>
           <div style={{color:'rgba(100,100,100)'}} className={classes.howItWork} >
@@ -38,6 +38,7 @@ function BookAppointment() {
             <img src={require('../../img/howItWork-5.png')} className={classes.howItWorkImage} alt=""/>
             <h3 className={classes.howItWorkTitle}>5. PAYMENT</h3>
             <p className={classes.howItWorkPar}>We accept payment by cash and bank transfer</p>
+          <p className={classes.howItWorkPar}>Additional Rp50.000 will be charged</p>
           </div>
           <div style={{color:'rgba(100,100,100)'}} className={classes.howItWork} >
             <img src={require('../../img/howItWork-6.png')} className={classes.howItWorkImage} alt=""/>

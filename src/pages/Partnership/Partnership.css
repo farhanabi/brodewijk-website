@@ -1,11 +1,51 @@
-.TnCTexts h2 {
+.partnerTexts h2 {
   font-family: 'Prata';
 }
 
-.TnCTexts p {
+.partnerTexts p {
   font-family: 'Helvetica';
   line-height: 1.5em;
   letter-spacing: 0.05em;
+}
+
+.occassions {
+  margin: 0px;
+  margin-top: 50px;
+  /*padding: 40px;*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.occassion {
+  margin: 0 10px;
+  width: 25%;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.occassionTitle {
+  margin: 0 0;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 1vw;
+  color: rgba(0,0,0,0.9);
+}
+
+.occassionImage {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.occassionPar {
+  letter-spacing: 0.1em;
+  font-size: 1vw;
+  color: rgba(0,0,0,0.9);
+  text-align: center;
 }
 
 @media (min-width: 901px) {  
@@ -30,7 +70,7 @@
     justify-content: center;
   }
 
-  .TnCTexts {
+  .partnerTexts {
     display: flex;
     flex-direction: column;
     margin: 0px;
@@ -39,13 +79,13 @@
     justify-content: center;
   }
 
-  .TnCText {
+  .partnerText {
     width: 60%;
     margin: 0 10px;
     text-align: left;
   }
 
-  .TnCPar {
+  .partnerPar {
     justify-content: flex-start;
     /*width: 50%;*/
     margin: 0 10px;
@@ -94,7 +134,7 @@
 
   .secondGrid {
     margin:50px 0 0 0;
-    padding: 10px;
+    padding: 0px;
     display: flex;
     justify-content: center;
   }
@@ -132,6 +172,51 @@
     color: white;
     background-color: rgb(50,50,50);
   }
+
+  .quotation1 {
+    margin: 0 10px 0 0;
+    font-size: 150px;
+    font-style: italic;
+    font-family: 'prata';
+    font-weight: 800;
+    letter-spacing: 0.025em;
+  }
+  
+  .quotes {
+    margin-bottom: 0;
+    font-size: 50px;
+    max-width: 50%;
+    font-style: italic;
+    font-weight: 200;
+    letter-spacing: 0.025em;
+  }
+
+  .quotation2 {
+    margin: 450px 0 0 -50px;
+    font-size: 150px;
+    font-style: italic;
+    font-family: 'prata';
+    font-weight: 800;
+    letter-spacing: 0.025em;
+  }
+
+  .occassions {
+    width: 100%;
+    align-content: space-around;
+    justify-content: space-around;
+    margin: 50px 0;
+  }
+
+  .occassion {
+    width: 18%;
+    margin: 0;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 900px) {
@@ -157,7 +242,7 @@
     justify-content: center;
   }
   
-  .TnCTexts {
+  .partnerTexts {
     display: flex;
     flex-direction: column;
     margin: 0px;
@@ -166,13 +251,13 @@
     justify-content: center;
   }
 
-  .TnCText {
+  .partnerText {
     width: 110%;
     margin: 0 0;
     text-align: left;
   }
 
-  .TnCPar {
+  .partnerPar {
     justify-content: flex-start;
     /*width: 50%;*/
     margin: 0 10px;
@@ -229,6 +314,65 @@
   .thirdGridImage {
     margin: 10px 0;
     width: 45%;
+  }
+
+  .quotation1 {
+    margin: 100px 0 0 0;
+    padding: 0;
+    font-size: 150px;
+    font-style: italic;
+    font-family: 'prata';
+    font-weight: 800;
+    letter-spacing: 0.025em;
+  }
+  
+  .quotes {
+    align-content: center;
+    text-align: center;
+    margin: -100px;
+    font-size: 10vw;
+    max-width: 70%;
+    font-style: italic;
+    font-weight: 200;
+    letter-spacing: 0.025em;
+  }
+
+  .quotation2 {
+    margin: 100px 0 -100px 0;
+    font-size: 150px;
+    font-style: italic;
+    font-family: 'prata';
+    font-weight: 800;
+    letter-spacing: 0.025em;
+  }
+
+  .occassions {
+    width: 100%;
+    align-content: space-around;
+    justify-content: space-around;
+  }
+
+  .occassion {
+    width: 40%;
+    margin: 20px 0 20px 0;
+  }
+
+  .occassionTitle {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .occassionImage {
+    margin-bottom: 20px;
+    width: 50%;
+  }
+
+  .occassionPar {
+    font-size: 12px;
+    text-align: center;
   }
 
   .footer {

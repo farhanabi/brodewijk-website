@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import classes from './Ukur.css';
 import SizeChart from './Ukur/SizeChart'
 
-const Fitur = ({pilihan,fiturJas,setPilihan,setFiturJas}) => {
+const Fitur = ({pilihan,kainPrice,measurePrice,fiturJas,setPilihan,setMeasurePrice,setFiturJas}) => {
   const [measMethod, setMeasMethod] = useState('Customize Size')
   const [standardSize, setStandardSize] = useState('M')
 	/*fitur.lapelStyle='notch';fitur.lapelWidth='medium';setFiturJas(fitur)
@@ -52,19 +52,19 @@ const Fitur = ({pilihan,fiturJas,setPilihan,setFiturJas}) => {
               <div className={classes.SizeBoxCont}>
               { (standardSize === 'S')
                 ? <span className={classes.SizeBoxSelected}>S</span>
-                : <span className={classes.SizeBox} onClick={()=>setStandardSize('S')}>S</span> }
+                : <span className={classes.SizeBox} onClick={()=>{setStandardSize('S');setMeasurePrice(0)}}>S</span> }
               { (standardSize === 'M')
                 ? <span className={classes.SizeBoxSelected}>M</span>
-                : <span className={classes.SizeBox} onClick={()=>setStandardSize('M')}>M</span> }
+                : <span className={classes.SizeBox} onClick={()=>{setStandardSize('M');setMeasurePrice(0)}}>M</span> }
               { (standardSize === 'L')
                 ? <span className={classes.SizeBoxSelected}>L</span>
-                : <span className={classes.SizeBox} onClick={()=>setStandardSize('L')}>L</span> }
+                : <span className={classes.SizeBox} onClick={()=>{setStandardSize('L');setMeasurePrice(0)}}>L</span> }
               { (standardSize === 'XL')
                 ? <span className={classes.SizeBoxSelected}>XL</span>
-                : <span className={classes.SizeBox} onClick={()=>setStandardSize('XL')}>XL</span> }
+                : <span className={classes.SizeBox} onClick={()=>{setStandardSize('XL');(kainPrice === 950000)?setMeasurePrice(100000):((kainPrice === 1420000)?setMeasurePrice(150000):setMeasurePrice(450000))}}>XL</span> }
               { (standardSize === 'XXL')
                 ? <span className={classes.SizeBoxSelected}>XXL</span>
-                : <span className={classes.SizeBox} onClick={()=>setStandardSize('XXL')}>XXL</span> }
+                : <span className={classes.SizeBox} onClick={()=>{setStandardSize('XXL');(kainPrice === 950000)?setMeasurePrice(100000):((kainPrice === 1420000)?setMeasurePrice(150000):setMeasurePrice(450000))}}>XXL</span> }
               </div>
             <SizeChart fit={fiturJas.fit} size={standardSize}/>
             </div>

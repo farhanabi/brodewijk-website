@@ -16,17 +16,15 @@ function ContactUs() {
           <h3>Call/Whatsapp:</h3>
           <p><a href='tel:+19179009571' target='_blank' rel='noopener noreferrer'>+1 (917) 900-9571 (<a className={classes.call} href='tel:+19179009571' target='_blank' rel='noopener noreferrer'>Call</a> only)</a> </p>
           <p><a href='tel:+628156051373' target='_blank' rel='noopener noreferrer'>+62 8156051373 (<a className={classes.call} href='tel:+628156051373' target='_blank' rel='noopener noreferrer'>Call</a> or <a className={classes.call} href='https://api.whatsapp.com/send?phone=628156051373&text=Hi%20Brodewijk!%20I%20am%20interested%20to%20learn%20more%20about%20you' target='_blank' rel='noopener noreferrer'>WhatsApp</a>)</a></p>
+          <h1 style={{marginTop:'75px',fontSize:'40px',textAlign:'center'}}>Let's Talk!</h1>
         </div>
-        <div className={classes.firstGrid}>
-          <img alt=''></img>
-        </div>
-        <div className={classes.firstGrid}>
-          <h1>Let's Talk!</h1>
+        <div className={classes.imageGrid}>
+          <img src={require('../../img/contact.png')} className={classes.image} alt=''></img>
         </div>
       </div>
       <Footer/>
     </div>
-  );
+  )
 }
 
 export default ContactUs;

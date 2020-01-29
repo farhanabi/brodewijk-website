@@ -11,6 +11,9 @@ import LandingPage from './pages/LandingPage/LandingPage'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Logout from './pages/Logout/Logout'
+import Partnership from './pages/Partnership/Partnership'
+import SizeGuide from './pages/SizeGuide/SizeGuide'
+import FAQ from './pages/FAQ/FAQ'
 
 import History from './Shared/History'
 
@@ -28,9 +31,12 @@ const App = () => {
         <Route path='/register' render={()=> <Register/>} />
         <Route path='/logout' render={()=> <Logout/>} />
         <Route path='/landing' render={()=> <LandingPage/>} />
+        <Route path='/partnership' render={()=> <Partnership/>} />
+        <Route path='/size-guide' render={()=> <SizeGuide/>} />
+        <Route path='/faq' render={()=> <FAQ/>} />
       </Router>
     </div>
-  );
+  )
 }
 
 export default App;

@@ -38,11 +38,20 @@ function TermsAndConditions() {
               </p>
             </div>
             <div className={classes.TnCText}>
-              <h2>Harga dan Cara Pembayaran</h2>
+              <h2>Harga dan Metode Pembayaran</h2>
               <p className={classes.TnCPar}>
                 <ul>
                   <li>Harga yang tertera adalah fixed price dan tidak bisa berubah kecuali terdapat diskon atau harga promosi</li>
                   <li>Dengan melakukan pemesanan, Customer menyetujui untuk membayar lunas total biaya yang harus dibayarkan, sebagaimana tertera dalam halaman pembayaran</li>
+                  <li>
+                    Untuk pemesanan melalui:
+                    <ul>
+                    <li>Online Customization: Pembayaran lunas 100% di awal</li>
+                    <li>Book Appointment: Pembayaran DP 50% di awal dan pelunasan 50% lainnya pada saat jas selesai dibuat.</li>
+                    <li>Partnership: Pembayaran DP 50% di awal dan pelunasan 50% lainnya pada saat jas selesai dibuat</li>
+                    </ul>
+                  </li>
+                  <li>Jas baru bisa dikirim setelah Customer melunasi pembayarannya</li>
                   <li>Pembayaran dapat dilakukan melalui pilihan metode pembayaran yang terdapat pada Payment Gateway yang telah disediakan oleh Brodewijk atau melalui bank transfer.</li>
                 </ul>
               </p>
@@ -52,7 +61,7 @@ function TermsAndConditions() {
               <p className={classes.TnCPar}>
                 <ul>
                   <li>Kami menjamin kualitas, kesesuaian, dan lama pengerjaan produk yang dipesan oleh Customer</li>
-                  <li>Lama pengerjaan adalah 15 (lima belas) hari kerja. Kami tidak bertanggung jawab dalam hal terjadi keterlambatan pengiriman dikarenakan kelalaian atau kesalahan kurir ekspedisi </li>
+                  <li>Lama pengerjaan adalah 15 (lima belas) hari. Kami tidak bertanggung jawab dalam hal terjadi keterlambatan pengiriman dikarenakan kelalaian atau kesalahan kurir ekspedisi </li>
                   <li>Waktu tercepat pengerjaan adalah 2 (dua) hari, dapat dilakukan dengan kondisi khusus termasuk di antaranya penambahan biaya sebesar Rp. 50,000 per pengurangan jumlah hari</li>
                   <li>Lama pengerjaan 15 (lima belas) hari tidak termasuk pengiriman</li>
                   <li>Lama pengiriman bergantung pada jenis layanan kurir ekspedisi dan lokasi tujuan pengiriman.</li>
@@ -106,24 +115,33 @@ function TermsAndConditions() {
                 Brodewijk only provides 3 ways to get the fit measurement:
                 <ol>
                   <li>Online Measurement: Through online measurement which the customer measure them self by looking at the guidance video and then upload the measurement result to the website.</li>
-                  <li>Template Size: Through our template size patterns that have been provided by Brodewijk.</li>
+                  <li>Standard Size: Through our template size patterns that have been provided by Brodewijk.</li>
                   <li>
                     Book Appointment:  Through our “Book Appointment”service which tailor from Brodewijk will come to the customer and directly measure the customer. This service is subject to the following conditions:
                     <ul>
                       <li>This service is currently only serving in Jabodetabek area (minimum order 3 pcs) and Bandung (without minimum order)</li>
                       <li>Customer can do reschedule of the booked appointment, but can’t cancel.</li>
-                      <li>Reschedule can only be done maximum 7 days before the original schedule time.</li>
+                      <li>Reschedule can only be done a maximum 7 days before the original scheduled time.</li>
                     </ul>
                   </li>
                 </ol>
               </p>
             </div>
             <div className={classes.TnCText}>
-              <h2>Price and How to Order</h2>
+              <h2>Price and Payment Method</h2>
               <p className={classes.TnCPar}>
                 <ul>
                   <li>Price displayed is a fixed price and can’t be changed unless there is a discount or promo price</li>
                   <li>Customer is obliged to pay the full price of the product, customer can’t pay partially</li>
+                  <li>
+                    For any orders made through:
+                    <ul>
+                    <li>Online Customization: Full payment 100%</li>
+                    <li>Book Appointment: DP 50% and the rest 50% is paid after the suit is finished.</li>
+                    <li>Partnership: DP 50% and the rest 50% is paid after the suit is finished.</li>
+                    </ul>
+                  </li>
+                  <li>The suit can only be sent after the Customer complete the payment.</li>
                   <li>Payment can be done through the payment methods that is available on our payment gateway or can be done through bank transfer.</li>
                 </ul>
               </p>
@@ -133,7 +151,7 @@ function TermsAndConditions() {
               <p className={classes.TnCPar}>
                 <ul>
                   <li>The product ordered is guaranteed by the quality and finishing time</li>
-                  <li>The working process takes maximum of 15 working days, but can be faster. We are not responsible for any late delivery due to negligence or error of the courier expedition.</li>
+                  <li>The working process takes maximum of 15 days, but can be faster. We are not responsible for any late delivery due to negligence or error of the courier expedition.</li>
                   <li>If the customer wants to have the express work (2 days), additional fee will apply as much as Rp 50,000 per reduction in the number of days</li>
                   <li>The working process time is excluded from the shipment time</li>
                   <li>The shipment process will depend on the courier agent and shipping destination.</li>
@@ -144,7 +162,7 @@ function TermsAndConditions() {
               <h2>Guarantee and Return</h2>
               <p className={classes.TnCPar}>
                 <ul>
-                  <li>The ordered and paid product can’t be cancel or refunded with any reason</li>
+                  <li>The ordered and paid product can’t be canceled or refunded with any reason</li>
                   <li>If the ordered product is not appropriate, product defects, or any damages, please contact our Customer Service at SMS/WA +628156051373 or email at contact@brodewijk.com</li>
                   <li>
                     Customer can do product returns subject to the following conditions:
@@ -157,7 +175,7 @@ function TermsAndConditions() {
                       <li>Covering fabrics type, colour, features, size</li>
                       <li>Product damages or defects are covering:</li>
                       <li>
-                        Kerusakan termasuk namun tidak terbatas kepada:
+                        Product damages or defects are covering:
                         <ul>
                           <li>Broken stitches/not neat</li>
                           <li>Broken buttons</li>
