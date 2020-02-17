@@ -36,8 +36,8 @@ const Carousel = () => {
 			<div className={classes.carousel}>
 	      <img src={require('../../../img/carousel-2.png')} className={classes.carouselImage} alt=""/>
 	    	<div className={classes.carouselText}>
-		    	<h3 style={{lineHeight:'1.5em',letterSpacing: '0.5em',fontWeight:400}}>GO GET IT WHILE IT LAST</h3>
-		    	<h1 style={{fontFamily:'Prata',padding:'20px 0 0 0',letterSpacing: '0.2em',fontWeight:600}}>ENJOY OUR 30% DISCOUNT</h1>
+		    	<h3 style={{lineHeight:'1.5em',letterSpacing: '0.5em',fontWeight:400}}>ON ORDER OVER Rp2.000.000</h3>
+		    	<h1 style={{fontFamily:'Prata',padding:'20px 0 0 0',letterSpacing: '0.2em',fontWeight:600}}>ENJOY OUR Rp200.000 DISCOUNT</h1>
 	      	<span onClick={()=>{setSeconds(0);setShow(0)}} className={classes.circle}></span>
 	      	<span className={classes.circleShow}></span>
 	      </div>

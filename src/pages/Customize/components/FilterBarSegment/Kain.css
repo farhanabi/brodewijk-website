@@ -21,7 +21,23 @@
   /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
   transition: 0.3s;
   border-radius: 5px;
+  border: 2px solid rgba(70,70,70,0);
   cursor: pointer;
+}
+
+.FabricListSelected {
+  padding: 10px;
+  /*margin: 5px;*/
+  width: 40%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+  transition: 0.3s;
+  border: 2px solid rgba(70,70,70,0.75);
+  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .FabricList:hover {

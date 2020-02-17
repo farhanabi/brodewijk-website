@@ -20,24 +20,20 @@ function Partnership() {
 
       <div className={classes.occassions}>
         <div style={{color:'rgba(100,100,100)'}} className={classes.occassion} >
-          <img src={require('../../img/wedding.png')} className={classes.occassionImage} alt=""/>
+          <img src={require('../../img/Partnership/Wedding.jpg')} className={classes.occassionImage} alt=""/>
           <h3 className={classes.occassionTitle}>WEDDING</h3>
         </div>
         <div style={{color:'rgba(100,100,100)'}} className={classes.occassion} >
-          <img src={require('../../img/graduation.png')} className={classes.occassionImage} alt=""/>
+          <img src={require('../../img/Partnership/Corporate Suit.jpg')} className={classes.occassionImage} alt=""/>
+          <h3 className={classes.occassionTitle}>CORPORATE SUIT</h3>
+        </div>
+        <div style={{color:'rgba(100,100,100)'}} className={classes.occassion} >
+          <img src={require('../../img/Partnership/TV Shows.png')} className={classes.occassionImage} alt=""/>
           <h3 className={classes.occassionTitle}>TV SHOWS</h3>
         </div>
         <div style={{color:'rgba(100,100,100)'}} className={classes.occassion} >
-          <img src={require('../../img/party.png')} className={classes.occassionImage} alt=""/>
-          <h3 className={classes.occassionTitle}>PARTY</h3>
-        </div>
-        <div style={{color:'rgba(100,100,100)'}} className={classes.occassion} >
-          <img src={require('../../img/business.png')} className={classes.occassionImage} alt=""/>
+          <img src={require('../../img/Partnership/Organizations Suit.jpg')} className={classes.occassionImage} alt=""/>
           <h3 className={classes.occassionTitle}>ORGANIZATION SUIT</h3>
-        </div>
-        <div style={{color:'rgba(100,100,100)'}} className={classes.occassion} >
-          <img src={require('../../img/business.png')} className={classes.occassionImage} alt=""/>
-          <h3 className={classes.occassionTitle}>CORPORATE SUIT</h3>
         </div>
       </div>
 

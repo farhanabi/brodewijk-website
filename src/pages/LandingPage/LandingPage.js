@@ -17,6 +17,9 @@ const LandingPage = () => {
 					<p className={classes.LandingPar}>Second, buy a suit in the Department Store will <b>waste your time.</b> Imagine if you can do it just from your home, what a great way to shop, right?.</p>
 					<p className={classes.LandingPar}>Third, buy a suit in the Department Store will only give you <b>a few choices of the model.</b> </p>
         </div>
+        <div className={classes.LandingText} style={{display:'flex',alignContent:'center',justifyContent:'center'}}>
+          <img src={require('../../img/gallery-landing.png')} className={classes.galleryImage} alt=""/>
+        </div>
         <div style={{display:'flex',padding:40,margin:'75px 0 20px 0',width:'100%',color:'white',background:'black',alignContent:'center',justifyContent:'center'}}>
           <div className={classes.LandingText}>
             <h2 style={{textAlign:'center',marginBottom:'40px'}}>Our Advantages</h2>

@@ -12,26 +12,51 @@ const Kain = ({pilihan,pilihanKain,harga,kainPrice,setPilihan,setPilihanKain,set
       	<h4 style={{margin:'5px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}><b style={{fontWeight:600}}>Super 200s Wool</b>, Cool in Summer, Warm in Winter, Easy to maintain, Wrinkle Free.</h4>
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Wedding, Business, Party, and Graduation</h4>
       	<div className={classes.InnerFabricsList}>
-	        <div onClick={()=>{setPilihanKain({jenis:'Blackpool',warna:'Dark Green'});setKainPrice(2110000)}} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Dim Gray/Dim Gray.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Dim Gray</label>
-	        </div>
-	        <div onClick={()=>{setPilihanKain({jenis:'Blackpool',warna:'Dark Green'});setKainPrice(2110000)}} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Navy Blue/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Navy Blue</label>
-	        </div>
-	        <div onClick={()=>{setPilihanKain({jenis:'Farlie',warna:'Black'});setKainPrice(2110000)}} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Olive Green/Olive Green.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Olive Green</label>
-	        </div>
-	        <div onClick={()=>{setPilihanKain({jenis:'Farlie',warna:'Black'});setKainPrice(2110000)}} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Peru Brown/Peru Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Peru Brown</label>
-	        </div>
-	        <div onClick={()=>{setPilihanKain({jenis:'Farlie',warna:'Black'});setKainPrice(2110000)}} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Saddle Brown/Saddle Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Saddle Brown</label>
-	        </div>
+	        { (pilihanKain.jenis === 'Hagebridge Wool/Dim Gray' && pilihanKain.warna === 'Dim Gray')
+      			? <div className={classes.FabricListSelected}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Dim Gray/Dim Gray.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Dim Gray</label>
+			        </div>
+			      : <div onClick={()=>{setPilihanKain({jenis:'Hagebridge Wool/Dim Gray',warna:'Dim Gray'});setKainPrice(2110000)}} className={classes.FabricList}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Dim Gray/Dim Gray.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Dim Gray</label>
+			        </div> }
+	        { (pilihanKain.jenis === 'Hagebridge Wool/Navy Blue' && pilihanKain.warna === 'Navy Blue')
+      			? <div className={classes.FabricListSelected}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Navy Blue/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Navy Blue</label>
+			        </div>
+	        	: <div onClick={()=>{setPilihanKain({jenis:'Hagebridge Wool/Navy Blue',warna:'Navy Blue'});setKainPrice(2110000)}} className={classes.FabricList}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Navy Blue/Navy Blue.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Navy Blue</label>
+			        </div> }
+	        { (pilihanKain.jenis === 'Hagebridge Wool/Olive Green' && pilihanKain.warna === 'Olive Green')
+      			? <div className={classes.FabricListSelected}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Olive Green/Olive Green.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Olive Green</label>
+			        </div>
+			      : <div onClick={()=>{setPilihanKain({jenis:'Hagebridge Wool/Olive Green',warna:'Olive Green'});setKainPrice(2110000)}} className={classes.FabricList}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Olive Green/Olive Green.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Olive Green</label>
+			        </div> }
+	        { (pilihanKain.jenis === 'Hagebridge Wool/Peru Brown' && pilihanKain.warna === 'Peru Brown')
+      			? <div className={classes.FabricListSelected}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Peru Brown/Peru Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Peru Brown</label>
+			        </div>
+			      : <div onClick={()=>{setPilihanKain({jenis:'Hagebridge Wool/Peru Brown',warna:'Peru Brown'});setKainPrice(2110000)}} className={classes.FabricList}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Peru Brown/Peru Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Peru Brown</label>
+			        </div> }
+	        { (pilihanKain.jenis === 'Hagebridge Wool/Saddle Brown' && pilihanKain.warna === 'Saddle Brown')
+      			? <div className={classes.FabricListSelected}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Saddle Brown/Saddle Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Saddle Brown</label>
+			        </div>
+			      : <div onClick={()=>{setPilihanKain({jenis:'Hagebridge Wool/Saddle Brown',warna:'Saddle Brown'});setKainPrice(2110000)}} className={classes.FabricList}>
+			          <img src={require(`../../../../img/livePreview/Hagebridge Wool/Saddle Brown/Saddle Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Saddle Brown</label>
+			        </div> }
         </div>
         <h3 style={{margin:'10px 0 10px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Vanelli</h3>
       	{/*<h4 style={{margin:'5px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'600',fontSize:'1.1vw'}}>Grade: Super 200s</h4>*/}
@@ -185,10 +210,15 @@ const Kain = ({pilihan,pilihanKain,harga,kainPrice,setPilihan,setPilihanKain,set
       	<h4 style={{margin:'5px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}><b style={{fontWeight:600}}>Semi Wool</b>, Classic solid black, Cool comfort, Easy to maintain.</h4>
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Business, Graduation, Party</h4>
       	<div className={classes.InnerFabricsList}>
-	        <div onClick={()=>{setPilihanKain({jenis:'Jet Black/Black',warna:'Black'});setKainPrice(975000)}} className={classes.FabricList}>
-	          <img src={require(`../../../../img/livePreview/Jet Black/Black/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
-	          <label style={{marginTop:5}}>Black</label>
-	        </div>
+      		{ (pilihanKain.jenis === 'Jet Black/Black' && pilihanKain.warna === 'Black')
+      			? <div className={classes.FabricListSelected}>
+			          <img src={require(`../../../../img/livePreview/Jet Black/Black/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Black</label>
+			        </div> 
+		        : <div onClick={()=>{setPilihanKain({jenis:'Jet Black/Black',warna:'Black'});setKainPrice(975000)}} className={classes.FabricList}>
+			          <img src={require(`../../../../img/livePreview/Jet Black/Black/Black.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
+			          <label style={{marginTop:5}}>Black</label>
+			        </div> }
         </div>
       </div>
       <span className={classes.changeFeature} onClick={()=>{setPilihan('fitur');setPilihanKain({...pilihanKain,jenis:'Siberia'})}}>Choose {pilihanKain.jenis} as Fabric</span>

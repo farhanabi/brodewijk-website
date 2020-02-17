@@ -17,6 +17,8 @@ function Accounts() {
   const [profileVisibility, setProfileVisibility] = useState()
   const [sizeVisibility, setSizeVisibility] = useState()
   const [orderVisibility, setOrderVisibility] = useState()
+  const [fabricVisibility, setFabricVisibility] = useState()
+  const [fabricTypeVisibility, setFabricTypeVisibility] = useState()
   const [firstName, setFirstName] = useState()
   const [lastName, setLastName] = useState()
   const [officeName, setOfficeName] = useState()
@@ -27,6 +29,13 @@ function Accounts() {
   const [kecamatan, setKecamatan] = useState()
   const [postalCode, setPostalCode] = useState()
   const [contactNumber, setContactNumber] = useState()
+
+  const [fabricTypeName, setFabricTypeName] = useState()
+  const [fabricTypeDesc, setFabricTypeDesc] = useState()
+  const [basePrice, setBasePrice] = useState()
+
+  const [fabricName, setFabricName] = useState()
+  const [fabricColor,setFabricColor] = useState()
 
   const [tinggiBadan, setTinggiBadan] = useState(0)
   const [beratBadan, setBeratBadan] = useState(0)
@@ -113,6 +122,12 @@ function Accounts() {
   const toggleOrder = () => {
     setOrderVisibility(!orderVisibility)
   }
+  const toggleFabricType = () => {
+    setFabricTypeVisibility(!fabricTypeVisibility)
+  }
+  const toggleFabric = () => {
+    setFabricVisibility(!fabricVisibility)
+  }
 
   const handleProfileSubmit = async (e) => {
     e.preventDefault()
@@ -186,6 +201,62 @@ function Accounts() {
       return alert('Success saving preference!')
     } else {
       return alert('Failed saving preference!')
+    }
+  }
+
+  const handleFabricTypeSubmit = async (e) => {
+    e.preventDefault()
+    let payload = {
+      fabricTypeName,
+      fabricTypeDesc,
+      basePrice
+    }
+
+    let complete = true;
+
+    Object.keys(payload).forEach(function(key,index) {
+      if ((key !== 'officeName') && (!payload[key])) {
+        complete = false
+      }
+
+      if ((key === 'officeName') && (!payload[key])) payload[key] = ''
+    })
+
+    if (!complete) return alert('Please complete the profile form')
+    
+    const response = await APIBuilder('profile/', payload, 'POST')
+    if (response.code === 200) {
+      return alert('Success adding fabric type!')
+    } else {
+      return alert('Failed adding fabric type!')
+    }
+  }
+
+  const handleFabricSubmit = async (e) => {
+    e.preventDefault()
+    let payload = {
+      fabricTypeName,
+      fabricTypeDesc,
+      basePrice
+    }
+
+    let complete = true;
+
+    Object.keys(payload).forEach(function(key,index) {
+      if ((key !== 'officeName') && (!payload[key])) {
+        complete = false
+      }
+
+      if ((key === 'officeName') && (!payload[key])) payload[key] = ''
+    })
+
+    if (!complete) return alert('Please complete the profile form')
+    
+    const response = await APIBuilder('profile/', payload, 'POST')
+    if (response.code === 200) {
+      return alert('Success adding fabric type!')
+    } else {
+      return alert('Failed adding fabric type!')
     }
   }
 
@@ -330,6 +401,57 @@ function Accounts() {
 
             <br />
             <input type="submit" value="Save Size" className={classes.saveProfile} />
+          </div>
+          <div className={classes.column}>
+          </div>
+        </form>
+        <button onClick={toggleFabricType} className={classes.accordionToggle}>
+          <h1>Add Fabric Type</h1>
+          <h1>{(!fabricTypeVisibility) ? '+' : '-'}</h1>
+        </button>
+        <form className={classes.firstGrids} style={{display: (!fabricTypeVisibility) ? 'none' : ''}} onSubmit={handleFabricTypeSubmit}>
+          <div className={classes.firstGrid}>
+            &nbsp;
+          </div>
+          <div className={classes.column}>
+            <div className={classes.firstGrid} style={{textAlign:'left'}}>
+              <h3>Fabric Type Name:</h3><input className={classes.input} type='text' value={fabricTypeName || ''} onChange={e => setFabricTypeName(e.target.value)} />
+            </div>
+            <div className={classes.firstGrid} style={{textAlign:'left'}}>
+              <h3>Description:</h3><input className={classes.input} type='text' value={fabricTypeDesc || ''} onChange={e => setFabricTypeDesc(e.target.value)} />
+            </div>
+            <div className={classes.firstGrid} style={{textAlign:'left'}}>
+              <h3>Base Price:</h3><input className={classes.input} type='text' value={basePrice || ''} onChange={e => setBasePrice(e.target.value)} />
+            </div>
+            <br />
+            <input type="submit" value="Save Fabric Type" className={classes.saveProfile} />
+          </div>
+          <div className={classes.column}>
+          </div>
+        </form>
+        <button onClick={toggleFabric} className={classes.accordionToggle}>
+          <h1>Add Fabric</h1>
+          <h1>{(!fabricVisibility) ? '+' : '-'}</h1>
+        </button>
+        <form className={classes.firstGrids} style={{display: (!fabricVisibility) ? 'none' : ''}} onSubmit={handleProfileSubmit}>
+          <div className={classes.firstGrid}>
+            &nbsp;
+          </div>
+          <div className={classes.column}>
+            <div className={classes.firstGrid} style={{textAlign:'left'}}>
+              <h3>Fabric Type:</h3>
+              <select className={classes.sizeDropdown} onChange={e => setStandardSize(e.target.value)} value={standardSize}>
+                <option value={0}>Choose Fabric Type</option>
+              </select>
+            </div>
+            <div className={classes.firstGrid} style={{textAlign:'left'}}>
+              <h3>Fabric Color Name:</h3><input className={classes.input} type='text' value={fabricColor || ''} onChange={e => setFabricTypeName(e.target.value)} />
+            </div>
+            <div className={classes.firstGrid} style={{textAlign:'left'}}>
+              <h3>Image</h3><input className={classes.input} type='text' value={fabricTypeDesc || ''} onChange={e => setFabricTypeDesc(e.target.value)} />
+            </div>
+            <br />
+            <input type="submit" value="Save Fabric" className={classes.saveProfile} />
           </div>
           <div className={classes.column}>
           </div>

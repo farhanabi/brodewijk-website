@@ -416,6 +416,15 @@ const Fitur = ({pilihan,pilihanKain,pilihanLining,harga,fiturJas,setPilihan,setP
 			          <img src={require(`../../../../img/customization/lapels/peak_wide.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5}}>Peak Wide</label>
 			        </div> }
+			    { (fiturJas.lapelStyle === 'round' && fiturJas.lapelWidth === 'medium') 
+		        ? <div className={classes.FeatureListSelected}>
+				        <img src={require(`../../../../img/customization/lapels/shawl.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5}}>Shawl</label>
+			        </div>
+		        : <div onClick={()=>{setFiturJas({...fiturJas,lapelStyle:'round',lapelWidth:'medium'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/lapels/shawl.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5}}>Shawl</label>
+			        </div> }
         </div>
         <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Chest Pocket</h3>
       	<div className={classes.InnerFeaturesList}>
@@ -570,28 +579,28 @@ const Fitur = ({pilihan,pilihanKain,pilihanLining,harga,fiturJas,setPilihan,setP
 			          <label style={{marginTop:5,textAlign:'center'}}>None</label>
 			        </div> }
         </div>
-        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Additional</h3>
+        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Pants</h3>
       	<div className={classes.InnerFeaturesList}>
-	        {// (fiturJas.pants === 'none') 
-		      //   ? <div className={classes.FeatureListSelected}>
-			     //      <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			     //      <label style={{marginTop:5,textAlign:'center'}}>Without Pants</label>
-			     //    </div> 
-		    		// : <div onClick={()=>{setFiturJas({...fiturJas,pants:'none'})}} className={classes.FeatureList}>
-			     //      <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			     //      <label style={{marginTop:5,textAlign:'center'}}>Without Pants</label>
-			     //    </div> }
-	       //  { (fiturJas.pants === 'with') 
-		      //   ? <div className={classes.FeatureListSelected}>
-			     //      <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			     //      <label style={{marginTop:5,textAlign:'center'}}>With Pants</label>
-			     //    </div>
-			     //  : <div onClick={()=>{setFiturJas({...fiturJas,pants:'with'})}} className={classes.FeatureList}>
-			     //      <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
-			     //      <label style={{marginTop:5,textAlign:'center'}}>With Pants</label>
-			     //    </div>
-			   	}
-			  	{(fiturJas.pants === 'none')
+	        { (fiturJas.pants === 'none') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/none.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Without Pants</label>
+			        </div> 
+		    		: <div onClick={()=>{setFiturJas({...fiturJas,pants:'none'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/none.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Without Pants</label>
+			        </div> }
+	        { (fiturJas.pants === 'with') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/pants/pants.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Pants</label>
+			        </div>
+			      : <div onClick={()=>{setFiturJas({...fiturJas,pants:'with'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/pants/pants.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Pants</label>
+			        </div>}
+			   	
+			  	{/*{(fiturJas.pants === 'none')
 				     	? <div onClick={()=>{setFiturJas({...fiturJas,pants:'with'})}} className={classes.FeatureList}>
 				    		  <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 				    			<label style={{marginTop:5,textAlign:'center'}}>Pants</label>
@@ -617,36 +626,78 @@ const Fitur = ({pilihan,pilihanKain,pilihanLining,harga,fiturJas,setPilihan,setP
 			    	: <div onClick={()=>{setFiturJas({...fiturJas,shirt:'none'})}} className={classes.FeatureListSelected}>
 			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			        	<label style={{marginTop:5,textAlign:'center'}}>Shirt</label>
-			        </div>} 
+			        </div>*/} 
+        </div>
+        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Vest</h3>
+      	<div className={classes.InnerFeaturesList}>
+	        { (fiturJas.vest === 'none') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/none.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Without Vest</label>
+			        </div> 
+		    		: <div onClick={()=>{setFiturJas({...fiturJas,vest:'none'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/none.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Without Vest</label>
+			        </div> }
+	        { (fiturJas.vest === 'with') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/vest/vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
+			        </div>
+			      : <div onClick={()=>{setFiturJas({...fiturJas,vest:'with'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/vest/vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Vest</label>
+			        </div>}
+        </div>
+        <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Shirt</h3>
+      	<div className={classes.InnerFeaturesList}>
+	        { (fiturJas.shirt === 'none') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/none.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Without Shirt</label>
+			        </div> 
+		    		: <div onClick={()=>{setFiturJas({...fiturJas,shirt:'none'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/none.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>Without Shirt</label>
+			        </div> }
+	        { (fiturJas.shirt === 'with') 
+		        ? <div className={classes.FeatureListSelected}>
+			          <img src={require(`../../../../img/customization/shirt/shirt.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Shirt</label>
+			        </div>
+			      : <div onClick={()=>{setFiturJas({...fiturJas,shirt:'with'})}} className={classes.FeatureList}>
+			          <img src={require(`../../../../img/customization/shirt/shirt.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <label style={{marginTop:5,textAlign:'center'}}>With Shirt</label>
+			        </div>}
         </div>
         <h3 style={{margin:'25px 0 5px 10px',fontFamily:'prata',letterSpacing:'0.03em',fontWeight:'500'}}>Tie</h3>
       	<div className={classes.InnerFeaturesList}>
 	        {(fiturJas.tie === 'none') 
 		        ? <div className={classes.FeatureListSelected}>
-			          <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <img src={require(`../../../../img/customization/none.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5,textAlign:'center'}}>None</label>
 			        </div> 
 		    		: <div onClick={()=>{setFiturJas({...fiturJas,tie:'none'})}} className={classes.FeatureList}>
-			          <img src={require(`../../../../img/customization/vest/no_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <img src={require(`../../../../img/customization/none.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5,textAlign:'center'}}>None</label>
 			        </div> }
 			    { (fiturJas.tie === 'bowtie') 
 		        ? <div className={classes.FeatureListSelected}>
-			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <img src={require(`../../../../img/customization/tie/bowtie.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5,textAlign:'center'}}>Bow Tie</label>
 			        </div>
 			      : <div onClick={()=>{setFiturJas({...fiturJas,tie:'bowtie'})}} className={classes.FeatureList}>
-			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <img src={require(`../../../../img/customization/tie/bowtie.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5,textAlign:'center'}}>Bow Tie</label>
 			        </div> 
 			   	}
 	        { (fiturJas.tie === 'necktie') 
 		        ? <div className={classes.FeatureListSelected}>
-			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <img src={require(`../../../../img/customization/tie/tie.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5,textAlign:'center'}}>Tie</label>
 			        </div>
 			      : <div onClick={()=>{setFiturJas({...fiturJas,tie:'necktie'})}} className={classes.FeatureList}>
-			          <img src={require(`../../../../img/customization/vest/with_vest.png`)} width='100%' className={classes.FeatureImage} alt=''/>
+			          <img src={require(`../../../../img/customization/tie/tie.png`)} width='100%' className={classes.FeatureImage} alt=''/>
 			          <label style={{marginTop:5,textAlign:'center'}}>Tie</label>
 			        </div> 
 			   	}

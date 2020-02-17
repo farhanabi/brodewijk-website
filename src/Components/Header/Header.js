@@ -64,10 +64,10 @@ const header = ({textColor, active, blackLogo, stickyHeader}) => {
           <div className={classes.search}>
             <input placeholder='SEARCH' className={(blackLogo) ? classes.searchBarBlackPlaceholder : classes.searchBar} type="text" />
           </div>
-          {/*<div className={classes.dropdown}>
+          <div className={classes.dropdown}>
             <Link className={classes.dropdownButton} style={(active === 'accounts') ? navStyleActive : navStyle} to="/accounts/"><img src={ (blackLogo) ? require('../../img/user-icon-black.png') : require('../../img/user-icon-white.png')} style={{maxWidth:20,margin:0}} alt=''/></Link>
             {authNav()}
-          </div>*/} 
+          </div>{/**/} 
         </nav>
       ):(active==='landing')
       ?(
@@ -88,10 +88,10 @@ const header = ({textColor, active, blackLogo, stickyHeader}) => {
           <div className={classes.search}>
             <input placeholder='SEARCH' className={(blackLogo) ? classes.searchBarBlackPlaceholder : classes.searchBar} type="text" />
           </div>
-          {/*<div className={classes.dropdown}>
+          <div className={classes.dropdown}>
             <Link className={classes.dropdownButton} style={(active === 'accounts') ? navStyleActive : navStyle} to="/accounts/"><img src={ (blackLogo) ? require('../../img/user-icon-black.png') : require('../../img/user-icon-white.png')} style={{maxWidth:20,margin:0}} alt=''/></Link>
             {authNav()}
-          </div>*/} 
+          </div>{/**/} 
         </nav>
       )}
        
