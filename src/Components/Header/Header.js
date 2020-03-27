@@ -11,7 +11,7 @@ const options = {
   debug: false, // enable logs
 };
 
-ReactPixel.init('2838665522877188', options);
+ReactPixel.init('1844940835638001', options);
 
 const header = ({textColor, active, blackLogo, stickyHeader}) => {
   // const styleSearchBar = {

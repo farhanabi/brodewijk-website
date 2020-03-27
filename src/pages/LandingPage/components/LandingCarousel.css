@@ -37,6 +37,13 @@
 		font-size: 15px;
 	}
 
+	.carouselText h2 {
+		line-height: 1.5em;
+		letter-spacing: 0.25em;
+		font-weight: 500;
+		font-size: 20px;
+	}
+
 	.carouselText h1 {
 		font-size: 4vw;
 	}
@@ -121,7 +128,14 @@
 	}
 
 	.carouselText h1 {
-		font-size: 32px;
+		font-size: 40px;
+	}
+
+	.carouselText h2 {
+		line-height: 1.5em;
+		letter-spacing: 0.25em;
+		font-weight: 400;
+		font-size: 20px;
 	}
 
 	.carouselText h3 {
