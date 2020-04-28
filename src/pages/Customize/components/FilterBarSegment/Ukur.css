@@ -1,3 +1,18 @@
+.checkboxGrid {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxGrid input {
+  color: rgba(0,0,0,0.2);
+  width: auto;
+  margin: 0 1em 0 0 ;
+} 
+
+.checkboxGrid h3{
+  font-weight: 500;
+}
+
 .SizeMethod {
   border: 2px solid black;
   max-height: 30px;
