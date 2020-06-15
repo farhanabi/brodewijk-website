@@ -1,0 +1,72 @@
+.FeatureList{
+  height: 120px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 1px;
+  white-space: nowrap;
+} 
+
+.FeatureItem{
+  width: 242px;
+  text-align: center;
+  padding: 50px 0;
+  border: 1px solid #f2f2f2;
+  background: #fff;
+  display: inline-block;
+}
+
+.FeatureItem h5{
+  margin: 0;
+}
+
+.FeatureWrapperInput{
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+  border: 1px solid #f2f2f2;
+  background: #fff;
+  display: inline-block;
+}
+
+.FeatureWrapperInput p{
+  margin: 0;
+  font-size: 12px;
+}
+
+.FeatureInput{
+  border: none;
+  border-bottom: 1px solid rgba(70, 70, 70, 0.75);
+  width: 80%;
+}
+
+.WrapperButton{
+  height: 60px;
+  padding: 5px;
+}
+
+.ButtonIcon {
+  width: 20px;
+  margin: 5px;
+  border: 1px solid rgba(70,70,70,1);
+  background: rgba(70,70,70,1);
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  float: right;
+}
+
+.ButtonAction {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid rgba(70,70,70,1);
+  background: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  float: right;
+}

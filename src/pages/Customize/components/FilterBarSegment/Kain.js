@@ -63,11 +63,11 @@ const Kain = ({pilihan,pilihanKain,harga,kainPrice,setPilihan,setPilihanKain,set
       	<h4 style={{margin:'5px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}><b style={{fontWeight:600}}>Super 200s Wool</b>,  Super Solid Colour, Warmer, Easy to maintain, Wrinkle Free.</h4>
       	<h4 style={{margin:'0px 20px 10px 10px',fontFamily:'Helvetica',letterSpacing:'0.03em',fontWeight:'400',fontSize:'1vw',lineHeight:'1.5em',color:'rgba(75,75,75,1)'}}>Best for Wedding, Business, Party, Graduation</h4>
       	<div className={classes.InnerFabricsList}>
-	        <div onClick={()=>{setPilihanKain({jenis:'Blackpool',warna:'Dark Green'});setKainPrice(2110000)}} className={classes.FabricList}>
+	        <div onClick={()=>{setPilihanKain({jenis:'Blackpool',warna:'Black Navy'});setKainPrice(2110000)}} className={classes.FabricList}>
 	          <img src={require(`../../../../img/livePreview/Vanelli/Black Navy/Black Navy.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
 	          <label style={{marginTop:5}}>Black Navy</label>
 	        </div>
-	        <div onClick={()=>{setPilihanKain({jenis:'Blackpool',warna:'Dark Green'});setKainPrice(2110000)}} className={classes.FabricList}>
+	        <div onClick={()=>{setPilihanKain({jenis:'Blackpool',warna:'Dark Brown'});setKainPrice(2110000)}} className={classes.FabricList}>
 	          <img src={require(`../../../../img/livePreview/Vanelli/Dark Brown/Dark Brown.jpg`)} width='100%' className={classes.FabricImage} alt=''/>
 	          <label style={{marginTop:5}}>Dark Brown</label>
 	        </div>

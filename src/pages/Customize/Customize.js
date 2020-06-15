@@ -5,6 +5,8 @@ import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import FilterBar from './components/FilterBar'
 import LivePreview from './components/LivePreview'
+import FilterBarMobile from './components/Mobile/FilterBarMobile'
+import LivePreviewMobile from './components/Mobile/LivePreviewMobile'
 import { Link } from 'react-router-dom'
 
 const Customize = () => {
@@ -27,7 +29,8 @@ const Customize = () => {
     shirt:'none',
     vest:'none',
     tie:'none',
-    monogram:''
+    monogram:'',
+    additionalRequest: ''
   })
 
   const [harga, setHarga] = useState(0)
@@ -69,34 +72,42 @@ const Customize = () => {
   
   return (
     <div className={classes.App}>
-      <div className={classes.stickyHeader}><Header textColor='black' active='customize' blackLogo/></div>
-      { (modal==='Shown')
-      ? <div className={classes.modal}>
-          { (window.innerWidth >= 950)
-          ? <div className={classes.modalContent}>
-              <span onClick={()=>setModal('Hidden')} className={classes.modalClose}>&times;</span>
-              <p style={{letterSpacing:'0.05em'}}>This page is still under construction. If you are willing to order, please use Book Appointment page.</p>
-              <div className={classes.LinkBoxCont}>
-                <span className={classes.LinkBox} onClick={()=>setModal('Hidden')}>Continue to Customize Page</span>
-                <Link className={classes.LinkBoxBlack} to="/appointment/">Proceed to Book Appointment Page Instead</Link>
-              </div>
+      
+      { (modal==='Shown') ? (
+        <div className={classes.modal}>
+          <div className={classes.modalContent}>
+            <span onClick={()=>setModal('Hidden')} className={classes.modalClose}>&times;</span>
+            <p style={{letterSpacing:'0.05em'}}>This page is still under construction. If you are willing to order, please use Book Appointment page.</p>
+            <div className={classes.LinkBoxCont}>
+              <button className={classes.LinkBox} onClick={()=>setModal('Hidden')}>Continue to Customize Page</button>
+              <Link to="/appointment/">
+                <button className={classes.LinkBoxBlack}>Proceed to Book Appointment Page Instead</button>
+              </Link>
             </div>
-          : <div className={classes.modalContent}>
-              <p style={{display:'flex',letterSpacing:'0.05em'}}>Sorry, this page is not yet available for the mobile view. Please try to view this page on your wide-screen device.</p>
-              <div className={classes.LinkBoxCont}>
-                <Link className={classes.LinkBoxBlack} to="/">Go Back to Homepage</Link>
-              </div>
+          </div>
+        </div>
+      ) : null}
+      
+      {(window.innerWidth >= 950) ? (
+        <React.Fragment>
+          <div className={classes.stickyHeader}><Header textColor='black' active='customize' blackLogo/></div>
+          <div className={classes.CustomizeContainer}>
+            <div className={classes.FilterBar}>
+              <FilterBar pilihan={pilihan} pilihanKain={pilihanKain} pilihanLining={pilihanLining} harga={harga} kainPrice={kainPrice} fiturPrice={fiturPrice} measurePrice={measurePrice} fiturJas={fiturJas} setPilihan={setPilihan} setPilihanKain={setPilihanKain} setPilihanLining={setPilihanLining} setHarga={setHarga} setKainPrice={setKainPrice} setFiturPrice={setFiturPrice} setMeasurePrice={setMeasurePrice} setFiturJas={setFiturJas}/>
             </div>
-          }
+            <LivePreview pilihanKain={pilihanKain} harga={harga} fiturJas={fiturJas} />
+          </div>
+          <Footer/>
+        </React.Fragment>
+      ) : (
+        <div className={classes.CustomizeWrapperMobile}>
+          <LivePreviewMobile pilihanKain={pilihanKain} harga={harga} fiturJas={fiturJas} />
+          <div className={classes.FilterBarMobile}>
+            <FilterBarMobile pilihan={pilihan} pilihanKain={pilihanKain} pilihanLining={pilihanLining} harga={harga} kainPrice={kainPrice} fiturPrice={fiturPrice} measurePrice={measurePrice} fiturJas={fiturJas} setPilihan={setPilihan} setPilihanKain={setPilihanKain} setPilihanLining={setPilihanLining} setHarga={setHarga} setKainPrice={setKainPrice} setFiturPrice={setFiturPrice} setMeasurePrice={setMeasurePrice} setFiturJas={setFiturJas}/>
+          </div>
         </div>
-      : null}
-      <div className={classes.CustomizeContainer}>
-        <div className={classes.FilterBar}>
-          <FilterBar pilihan={pilihan} pilihanKain={pilihanKain} pilihanLining={pilihanLining} harga={harga} kainPrice={kainPrice} fiturPrice={fiturPrice} measurePrice={measurePrice} fiturJas={fiturJas} setPilihan={setPilihan} setPilihanKain={setPilihanKain} setPilihanLining={setPilihanLining} setHarga={setHarga} setKainPrice={setKainPrice} setFiturPrice={setFiturPrice} setMeasurePrice={setMeasurePrice} setFiturJas={setFiturJas}/>
-        </div>
-        <LivePreview pilihanKain={pilihanKain} harga={harga} fiturJas={fiturJas} />
-      </div>
-      <Footer/>
+      )}
+      
     </div>
   );
 }

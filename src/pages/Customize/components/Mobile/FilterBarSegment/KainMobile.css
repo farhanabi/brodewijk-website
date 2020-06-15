@@ -1,0 +1,52 @@
+.FabricsList{
+  height: 120px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 1px;
+  white-space: nowrap;
+} 
+
+.FabricItem{
+  width: 242px;
+  text-align: center;
+  padding: 50px 0;
+  border: 1px solid #f2f2f2;
+  background: #fff;
+  display: inline-block;
+}
+
+.FabricItem h5{
+  margin: 0;
+}
+
+.WrapperButton{
+  height: 60px;
+  padding: 5px;
+}
+
+.ButtonIcon {
+  width: 20px;
+  margin: 5px;
+  border: 1px solid rgba(70,70,70,1);
+  background: rgba(70,70,70,1);
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  float: right;
+}
+
+.ButtonAction {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid rgba(70,70,70,1);
+  background: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  float: right;
+}

@@ -51,6 +51,7 @@ const header = ({textColor, active, blackLogo, stickyHeader}) => {
       )
     }
   }
+  console.log(active)
 
 	return (
 		<header className={(stickyHeader) ? classes.appHeaderSticky : classes.appHeader}>

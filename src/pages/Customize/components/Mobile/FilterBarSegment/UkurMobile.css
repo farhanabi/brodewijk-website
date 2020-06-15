@@ -1,0 +1,129 @@
+.MeasureList{
+  height: 120px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 1px;
+  white-space: nowrap;
+} 
+
+.MeasureItem{
+  width: 242px;
+  text-align: center;
+  padding: 50px 0;
+  border: 1px solid #f2f2f2;
+  background: #fff;
+  display: inline-block;
+}
+
+.MeasureItem h5{
+  margin: 0;
+}
+
+.MeasureWrapper{
+  width: 100%;
+  height: 120px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 1px;
+  white-space: nowrap;
+} 
+
+.MeasureWrapper h5{
+  margin: 5px;
+}
+
+.InnerMeasurementsList{
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} 
+
+.MeasurementLabel p {
+  display: inline-block;
+}
+
+.MeasurementLabel, .LabelUnit {
+  font-family:'Helvetica';
+  margin-left: 5px;
+  margin-right: 5px;
+  letter-spacing: 0.02em;
+  font-size: 11px;
+}
+
+.MeasurementInput {
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(100,100,100,0.5);
+  transition: width 0.4s ease-in-out;
+  color: rgba(50,50,50,1);
+  font-weight: 500;
+  font-size: 11px;
+  text-align: right;
+  height: 25px;
+}
+
+.MeasurementInput:focus {
+  border-bottom: 2px solid rgba(50,50,50,1);
+  transition: width 0.4s ease-in-out;
+}
+
+.SizeBoxCont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SizeBox, .SizeBoxSelected {
+  align-items: center;
+  border: 2px solid rgba(70,70,70,1);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  font-weight: 400;
+  padding: 10px;
+  width: 7.5%;
+}
+
+.SizeBoxSelected {
+  color: #fff;
+  background-color: rgba(70,70,70,1);
+  width: 25%;
+}
+
+.WrapperButton{
+  height: 60px;
+  padding: 5px;
+}
+
+.ButtonIcon {
+  width: 20px;
+  margin: 5px;
+  border: 1px solid rgba(70,70,70,1);
+  background: rgba(70,70,70,1);
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  float: right;
+}
+
+.ButtonAction {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid rgba(70,70,70,1);
+  background: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  float: right;
+}

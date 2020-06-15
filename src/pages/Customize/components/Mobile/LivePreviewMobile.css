@@ -1,0 +1,62 @@
+.LivePreviewMobile {
+  width: 100%;
+}
+
+.wrapperImage {
+  padding-left: 30%;
+  height: 450px;
+}
+
+.wrapperText {
+  text-align: center;
+}
+
+.PreviewImage {
+  width: 40%;
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .wrapperImage{
+    padding-left: 25%;
+  }
+  .PreviewImage {
+    width: 50%;
+  }
+}
+
+@media (max-width: 720px) {
+  .wrapperImage {
+    height: 400px
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapperImage {
+    height: 370px
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapperImage {
+    height: 330px
+  }
+}
+
+@media (max-width: 520px) {
+  .wrapperImage {
+    height: 300px
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapperImage {
+    height: 250px
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapperImage {
+    height: 210px
+  }
+}
